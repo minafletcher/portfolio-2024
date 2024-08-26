@@ -1,0 +1,229 @@
+/* archivo and titillium web */
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap'); */
+
+/* public sans + titillium web + works sans*/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* I like Nacelle more than Geist for headers */
+/* I like Nacelle more than archivo */
+
+/* Work Sans or Hubot Sans for body ? */
+/* Nacelle or Mona Sans for header ? */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Nacelle";
+    font-weight: normal;
+    src: url("../public/Fonts/Nacelle/Nacelle-Regular.otf");
+  }
+
+  @font-face {
+    font-family: "Nacelle";
+    font-weight: bold;
+    src: url("../public/Fonts/Nacelle/Nacelle-Bold.otf");
+}
+
+@font-face {
+    font-family: "Nacelle";
+    font-weight: 600;
+    src: url("../public/Fonts/Nacelle/Nacelle-SemiBold.otf");
+}
+
+  @font-face {
+    font-family: "Hubot Sans";
+    font-weight: normal;
+    src: url("../public/Fonts/HubotSans/HubotSans-Regular.woff2");
+  }
+
+  @font-face {
+    font-family: "Mona Sans";
+    font-weight: bold;
+    src: url("../public/Fonts/MonaSans/MonaSans-SemiBold.woff2");
+  }
+
+  @font-face {
+    font-family: "Mona Sans";
+    font-weight: normal;
+    src: url("../public/Fonts/MonaSans/MonaSans-Regular.woff2");
+  }
+
+.font-mona {
+  font-family: "Mona Sans", sans-serif;
+}
+
+.font-hubot {
+  font-family: "Hubot Sans", sans-serif;
+}
+
+@layer base {
+    .mobile-heading1 {
+        @apply text-48 leading-tight font-bold font-mona;
+    }
+
+    .mobile-heading2 {
+        @apply text-30 leading-tight font-bold font-mona;
+    }
+
+    .mobile-heading3 {
+        @apply text-18 leading-snug font-bold font-mona 
+    }
+
+    .mobile-heading4 {
+        @apply text-14 leading-snug font-bold font-mona
+    }
+
+    .mobile-body {
+        @apply text-14 font-hubot leading-18;
+    }
+
+    .tablet-heading1 {
+        @apply text-72 font-bold font-mona;
+    }
+
+    .tablet-heading2 {
+        @apply text-36 font-bold font-mona;
+    }
+
+    .tablet-body {
+        @apply text-16 font-hubot leading-20;
+    }
+
+    .heading1 {
+        @apply text-100 leading-tight font-bold font-mona;
+    }
+    .heading2 {
+        @apply text-36 leading-snug font-semibold font-mona;
+    }
+    .heading3 {
+        @apply text-20 leading-snug font-semibold font-mona;
+    }
+
+    .heading2-5 {
+        @apply text-24 font-semibold font-mona;
+    }
+
+    .body {
+        @apply text-16 font-hubot leading-[22px];
+    }
+
+    .sub-body {
+        @apply text-14 font-hubot leading-20;
+    }
+
+    .project-grid {
+        @apply grid mobile:grid-cols-1 tablet:grid-cols-2 gap-8;
+    }
+
+    .small-heading {
+        @apply text-16 leading-snug font-medium font-rubik;
+    }
+
+    .about-link {
+        @apply hover:scale-110 transition-all duration-200 w-12
+    }
+    .footer-link {
+        @apply hover:scale-110 transition-all duration-200 w-12
+    }
+
+    .small-button {
+        @apply uppercase body mobile:mobile-body tablet:tablet-body font-mona cursor-pointer rounded-md px-4 tablet:py-2 mobile:py-1 bg-black text-white border-black border hover:bg-white hover:text-black transition-all duration-200 ease-in-out
+    }
+
+    .lg-button {
+        @apply uppercase body mobile:mobile-body tablet:tablet-body font-mona cursor-pointer rounded-md px-8 tablet:py-3 mobile:py-2 bg-black text-white border-black border hover:bg-white hover:text-black transition-all duration-200 ease-in-out
+    }
+
+    .snap-scroll {
+        @apply mobile:h-full laptop:h-screen laptop:snap-start laptop:min-h-[600px]
+    }
+
+    .section-vert {
+        @apply relative flex flex-col w-full
+    }
+
+    .section-hor {
+        @apply relative flex laptop:flex-row mobile:flex-col w-full
+    }
+
+    .section-header {
+        @apply text-black laptop:heading2 tablet:tablet-heading2 mobile:mobile-heading2
+    }
+
+    .section-px-lg {
+        @apply laptop:px-[12%] desktopMax:px-[20%] tablet:px-10 mobile:px-4
+    }
+
+    .section-px-sm {
+        @apply laptop:px-[10%] tablet:px-10 mobile:px-4
+    }
+
+    .body-responsive {
+        @apply laptop:body tablet:tablet-body mobile:mobile-body text-black
+    }
+    
+    .heading1-responsive {
+        @apply laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1
+    }
+
+    .heading3-responsive {
+        @apply laptop:heading3 mobile:mobile-heading3
+    }
+
+    .nav-padding {
+        @apply laptop:mt-14 tablet:mt-5 mobile:mt-4 laptop:mx-14 tablet:mx-10 mobile:mx-4
+    }
+
+    .nav-dots-padding {
+        @apply laptop:mb-14 tablet:mb-10 mobile:mb-4 mr-14
+    }
+
+    .nav-burger {
+        @apply absolute w-fit h-fit bg-white opacity-90 flex flex-col px-14 py-8
+    }
+
+    .lg-button-white {
+        @apply cursor-pointer w-fit border-2 rounded-md border-white text-white tablet:heading2-5 mobile:mobile-heading3 uppercase py-2 px-10 hover:text-black hover:bg-white transition-all duration-200
+    }
+
+    .section-b-padding {
+        @apply mobile:pb-40 laptop:pb-0;
+    }
+
+    .nav-small-link {
+        @apply body-responsive font-mona text-black hover:italic
+    }
+}
+
+
+html,
+body,
+#root
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFDF6;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+}
+
+/* Hamburger Menu */
+.HAMBURGER-ICON {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
