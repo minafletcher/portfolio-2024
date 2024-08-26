@@ -32,7 +32,7 @@ export default function AboutMe({ sectionKey, setDot }) {
 
         <div className="HEADSHOT-TEXT-CONTAINER flex laptop:flex-row mobile:flex-col items-center mobile:gap-6 laptop:gap-12">
           <img
-            className="ABOUT-ME-HEADSHOT shrink-0 laptop:w-2/5 tablet:w-5/12 mobile:w-8/12 aspect-square max-w-md"
+            className="ABOUT-ME-HEADSHOT laptop:w-2/5 tablet:w-5/12 mobile:w-8/12 aspect-square max-w-md"
             src={content.aboutMe.imgUrl}
             alt={content.aboutMe.imgAlt}
           ></img>

@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import scrollViewHelper from "../helpers/scrollToView";
 
 export default function Dot({ dotKey, dotId, setDot, activeDot, dotsLight }) {

@@ -15,7 +15,7 @@ export default function Dropdown({ block, toggle, open }) {
     "DROPDOWN-TOP cursor-pointer flex tablet:flex-row tablet:flex-wrap mobile:flex-col tablet:items-center mobile:items-start justify-between gap-1 transition-all duration-300 ease-in-out",
     {
       "pb-2": open,
-      "px-0 hover:px-2": !open,
+      "px-0 laptop:hover:px-2": !open,
     }
   );
 

@@ -68,7 +68,7 @@ export default function HamburgerMenu({ sketchbook, setDot, navLight }) {
         )}
       </div>
       <div className="HAMBURGER-WRAPPER top-0 z-50 fixed right-0 nav-padding laptop:mt-10 mobile:mt-0">
-        <div className="HAMBURGER-ICON-WRAPPER flex items-center">
+        <div className="HAMBURGER-ICON-WRAPPER flex items-center cursor-pointer">
           <div className={overlay_close_container}></div>
           <HamburgerButton
             navLight={navLight}
