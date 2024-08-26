@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import content from "../../content/content";
 import ResumeIcon from "../../content/img/svgs/resume-icon.svg?react";
+import { Link } from "react-router-dom";
 
 export default function Experience({ sectionKey, setDot }) {
   // use state to set first drawer initially to open
@@ -41,9 +42,16 @@ export default function Experience({ sectionKey, setDot }) {
           </div>
 
           <div className="VIEW-RESUME">
-            <div className="mobile:mobile-body tablet:tablet-body">
-              {content.experience.downloadText}
-            </div>
+            <Link
+              className="flex flex-row items-center gap-2 cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
+              to={content.contact.links[0].linkUrl}
+              target="_blank"
+            >
+              <div className="body-responsive">
+                {content.experience.downloadText}
+              </div>
+              <ResumeIcon className="w-8 h-8 fill-black"></ResumeIcon>
+            </Link>
           </div>
         </div>
 

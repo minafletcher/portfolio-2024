@@ -260,7 +260,7 @@ const content = {
 
   experience: {
     header: "Experience",
-    downloadText: "View My Resume",
+    downloadText: "My Resume",
     openSvg: OpenIcon,
     openAlt: "Open menu button",
     closeSvg: CloseIcon,
