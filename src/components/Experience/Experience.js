@@ -47,7 +47,7 @@ export default function Experience({ sectionKey, setDot }) {
               to={content.contact.links[0].linkUrl}
               target="_blank"
             >
-              <div className="body-responsive">
+              <div className="body-responsive font-mona">
                 {content.experience.downloadText}
               </div>
               <ResumeIcon className="w-8 h-8 fill-black"></ResumeIcon>
