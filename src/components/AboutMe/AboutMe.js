@@ -25,31 +25,31 @@ export default function AboutMe({ sectionKey, setDot }) {
       id="about"
       className="ABOUT-ANCHOR relative section-b-padding"
     >
-      <div className="ABOUT-ME-CONTAINER snap-scroll section-hor justify-center items-center section-px-lg">
-        <div className="ABOUT-ME-HEADER-MOBILE flex w-full justify-end mb-14 section-header laptop:hidden">
+      <div className="ABOUT-ME-CONTAINER snap-scroll flex mobile:flex-col laptop:flex-row mobile:gap-6 laptop:gap-12 justify-center items-center section-px-lg">
+        <div className="ABOUT-ME-HEADER-MOBILE flex w-full justify-end section-header laptop:hidden">
           {content.aboutMe.header}
         </div>
 
-        <div className="HEADSHOT-TEXT-CONTAINER flex laptop:flex-row mobile:flex-col items-center">
+        <div className="HEADSHOT-TEXT-CONTAINER flex laptop:flex-row mobile:flex-col items-center mobile:gap-6 laptop:gap-12">
           <img
             className="ABOUT-ME-HEADSHOT shrink-0 laptop:w-2/5 tablet:w-5/12 mobile:w-8/12 aspect-square max-w-md"
             src={content.aboutMe.imgUrl}
             alt={content.aboutMe.imgAlt}
           ></img>
 
-          <div className="ABOUT-ME-TEXT flex flex-col laptop:pl-10 laptop:mr-10 mobile:pb-8">
+          <div className="ABOUT-ME-TEXT flex flex-col gap-4">
             <div className="ABOUT-ME-HEADER-LAPTOP section-header laptop:block mobile:hidden">
               {content.aboutMe.header}
             </div>
-            <div className="ABOUT-ME-BIO text-black body-responsive">
-              <div className="pt-4">{content.aboutMe.line1}</div>
-              <div className="pt-4">{content.aboutMe.line2}</div>
-              <div className="pt-4">{content.aboutMe.line3}</div>
+            <div className="ABOUT-ME-BIO section-vert gap-4 text-black body-responsive">
+              <div>{content.aboutMe.line1}</div>
+              <div>{content.aboutMe.line2}</div>
+              <div>{content.aboutMe.line3}</div>
             </div>
           </div>
         </div>
 
-        <div className="ABOUT-ME-LINKS flex gap-4 laptop:flex-col mobile:flex-row justify-center h-min p-4">
+        <div className="ABOUT-ME-LINKS flex gap-4 laptop:flex-col mobile:flex-row justify-center h-min">
           <Link to={content.contact.links[0].linkUrl} target="_blank">
             <ResumeIcon className="about-link fill-black"></ResumeIcon>
           </Link>
