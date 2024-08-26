@@ -46,14 +46,12 @@ export default function Dot({ dotKey, dotId, setDot, activeDot, dotsLight }) {
   return (
     <div className="DOT-WRAPPER flex flex-row h-5 gap-2 justify-end items-center">
       <div className={dotName}>{dotId}</div>
-      <Link to={"/#" + dotId}>
         <div
           className={dotCond}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
           onClick={handleDotClick}
         ></div>
-      </Link>
     </div>
   );
 }
