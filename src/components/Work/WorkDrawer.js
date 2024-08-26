@@ -12,14 +12,14 @@ export default function WorkDrawer({ project, toggle, open }) {
   );
 
   const titleTags = classNames(
-    "TITLE-TAGS flex flex-row flex-nowrap justify-between transition-all duration-300 ease-in-out",
+    "TITLE-TAGS flex flex-row mobile:flex-wrap laptop:flex-nowrap justify-between mobile:gap-2 laptop:gap-0 transition-all duration-300 ease-in-out",
     {
-      "px-0 hover:px-2 cursor-pointer": !open,
+      "px-0 laptop:hover:px-2 cursor-pointer": !open,
     }
   );
 
   const mobileImg = classNames(
-    "MOBILE-IMG basis-1/2 laptop:hidden transition-all duration-400 ease-in-out",
+    "MOBILE-IMG mobile:basis-1/2 tablet:basis-1/4 laptop:hidden transition-all duration-400 ease-in-out",
     {
       "opacity-100": open,
       "opacity-0": !open,
@@ -46,18 +46,18 @@ export default function WorkDrawer({ project, toggle, open }) {
       </div>
 
       <div className={dropdown}>
-        <div className="overflow-hidden flex flex-col gap-4">
-          <div className="PROJECT-DESCRIPTION flex mobile:flex-col tablet:flex-row body-responsive gap-4">
+        <div className="overflow-hidden flex flex-row laptop:flex-col gap-4">
+          <div className="DESC-BTN-WRAPPER section-vert body-responsive gap-4">
             {project.description}
-            <div className={mobileImg}>
-              <img className="rounded-lg" src={project.projImg}></img>
-            </div>
+            <Link className="max-w-fit" to={project.buttonUrl} target="_blank">
+              <button className="small-button max-w-fit capitalize">
+                {project.buttonTxt}
+              </button>
+            </Link>
           </div>
-          <Link className="max-w-fit" to={project.buttonUrl} target="_blank">
-            <button className="small-button max-w-fit capitalize">
-              {project.buttonTxt}
-            </button>
-          </Link>
+          <div className={mobileImg}>
+            <img className="rounded-lg" src={project.projImg}></img>
+          </div>
         </div>
       </div>
     </div>
