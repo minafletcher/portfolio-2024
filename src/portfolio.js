@@ -19,7 +19,7 @@ const Portfolio = ({
   dotsLight,
 }) => {
   return (
-    <div className="PORTFOLIO-CONTAINER">
+    <div className="PORTFOLIO-CONTAINER flex flex-col mobile:gap-20 laptop:gap-0">
       <HamburgerMenu
         sketchbook={false}
         setDot={setActiveDot}

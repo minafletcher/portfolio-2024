@@ -30,7 +30,7 @@ export default function Skills({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="skills"
-      className="SKILLS-ANCHOR section-b-padding anchor-padding"
+      className="SKILLS-ANCHOR anchor-padding"
     >
       <div className="SKILLS-CONTAINER snap-scroll section-vert mobile:gap-0 laptop:gap-8 justify-center section-px-lg">
         <div className="HEADER-BODY-WRAPPER flex flex-col gap-4">

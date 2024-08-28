@@ -23,7 +23,7 @@ export default function AboutMe({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="about"
-      className="ABOUT-ANCHOR relative section-b-padding anchor-padding"
+      className="ABOUT-ANCHOR relative anchor-padding"
     >
       <div className="ABOUT-ME-CONTAINER snap-scroll flex mobile:flex-col laptop:flex-row mobile:gap-8 laptop:gap-12 justify-center items-center section-px-lg">
         <div className="ABOUT-ME-HEADER-MOBILE flex w-full justify-end section-header laptop:hidden">

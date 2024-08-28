@@ -30,7 +30,7 @@ export default function Work({ sectionKey, setDot }) {
   }, [containerRef, isVisible]);
 
   return (
-    <div ref={containerRef} id="work" className="WORK-ANCHOR section-b-padding anchor-padding">
+    <div ref={containerRef} id="work" className="WORK-ANCHOR anchor-padding">
       <div className="WORK-CONTAINER section-vert snap-scroll justify-center section-px-lg">
         <div className="WORK-HEADER section-header">{content.work.header}</div>
         <div className="TABS-IMG flex flex-row justify-between laptop:gap-8">

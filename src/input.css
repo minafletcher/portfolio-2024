@@ -131,7 +131,7 @@
     }
 
     .snap-scroll {
-        @apply mobile:h-fit laptop:h-screen laptop:snap-start laptop:min-h-[600px]
+        @apply mobile:h-fit laptop:h-screen laptop:snap-start laptop:min-h-[800px]
     }
 
     .section-vert {
@@ -182,20 +182,20 @@
         @apply cursor-pointer w-fit border-2 rounded-md border-white text-white tablet:heading2-5 mobile:mobile-heading3 uppercase py-2 px-10 hover:text-black hover:bg-white transition-all duration-200
     }
 
-    .section-b-padding {
-        @apply mobile:pb-40 laptop:pb-0;
-    }
-
     .nav-small-link {
         @apply body-responsive font-mona text-black hover:italic
     }
 
     .screen-height {
-        @apply h-screen mobile:custom-screen-height laptop:min-h-[600px]
+        @apply h-screen mobile:custom-screen-height laptop:min-h-[800px]
     }
 
     .anchor-padding {
         @apply mobile:pt-20 laptop:pt-0
+    }
+
+    .background-section {
+        @apply z-10 bg-black section-vert snap-scroll screen-height section-px-sm
     }
 }
 

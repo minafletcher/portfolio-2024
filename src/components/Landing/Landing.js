@@ -21,7 +21,7 @@ export default function Landing({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="home"
-      className="LANDING-ANCHOR section-b-padding"
+      className="LANDING-ANCHOR"
     >
       <div className="CONT-CANVAS snap-scroll h-screen grid grid-cols-[1fr] items-center top-0">
         <div className="LANDING-CONTAINER max-w-fit section-vert row-start-1 col-start-1 z-10 section-px-sm">
