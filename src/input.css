@@ -197,11 +197,11 @@
     }
 
     .screen-height {
-        @apply mobile:h-[600px] tablet:h-[800px] laptop:h-screen laptop:min-h-[600px]
+        @apply h-screen mobile:min-h-screen tablet:min-h-screen laptop:min-h-[600px]
     }
 
     .anchor-padding {
-        @apply mobile:pt-32 laptop:pt-0
+        @apply mobile:pt-20 tablet:pt-40 laptop:pt-0
     }
 }
 
