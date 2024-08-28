@@ -131,15 +131,15 @@
     }
 
     .snap-scroll {
-        @apply mobile:h-full laptop:h-screen laptop:snap-start laptop:min-h-[800px]
+        @apply h-fit laptop:min-h-screen laptop:snap-start
     }
 
     .section-vert {
-        @apply relative flex flex-col w-full
+        @apply relative flex flex-col w-full mobile:py-5 tablet:py-12 laptop:py-20
     }
 
     .section-hor {
-        @apply relative flex laptop:flex-row mobile:flex-col w-full
+        @apply relative flex laptop:flex-row mobile:flex-col w-full mobile:py-5 tablet:py-12 laptop:py-20
     }
 
     .section-header {
@@ -191,7 +191,11 @@
     }
 
     .background-section {
-        @apply z-10 mobile:mt-20 laptop:mt-0 bg-black section-vert snap-scroll section-px-sm
+        @apply flex flex-col z-10 bg-black snap-scroll section-px-sm mobile:mt-24 tablet:mt-32 laptop:mt-20
+    }
+
+    .section-margin-offset {
+        @apply mobile:mb-5 tablet:mb-12 laptop:mb-20
     }
 }
 

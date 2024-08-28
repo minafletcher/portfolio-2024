@@ -25,7 +25,7 @@ export default function AboutMe({ sectionKey, setDot }) {
       id="about"
       className="ABOUT-ANCHOR relative anchor-padding"
     >
-      <div className="ABOUT-ME-CONTAINER snap-scroll flex mobile:flex-col laptop:flex-row mobile:gap-8 laptop:gap-12 justify-center items-center section-px-lg">
+      <div className="ABOUT-ME-CONTAINER snap-scroll section-hor mobile:gap-8 laptop:gap-12 justify-center items-center section-px-lg">
         <div className="ABOUT-ME-HEADER-MOBILE flex w-full justify-end section-header laptop:hidden">
           {content.aboutMe.header}
         </div>
@@ -41,7 +41,7 @@ export default function AboutMe({ sectionKey, setDot }) {
             <div className="ABOUT-ME-HEADER-LAPTOP section-header laptop:block mobile:hidden">
               {content.aboutMe.header}
             </div>
-            <div className="ABOUT-ME-BIO section-vert gap-4 text-black body-responsive">
+            <div className="ABOUT-ME-BIO flex flex-col gap-4 text-black body-responsive">
               <div>{content.aboutMe.line1}</div>
               <div>{content.aboutMe.line2}</div>
               <div>{content.aboutMe.line3}</div>

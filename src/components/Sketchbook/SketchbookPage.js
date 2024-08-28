@@ -14,8 +14,9 @@ export default function SketchbookPage({ navLight }) {
   };
 
   return (
+    <>
+    <HamburgerMenu sketchbook={true} navLight={navLight} />
     <div className="SKETCHBOOK-CONTAINER section-vert section-px-lg pt-40 pb-40 laptop:snap-start">
-      <HamburgerMenu sketchbook={true} navLight={navLight} />
       <div className="TITLE-INFO-WRAPPER flex flex-col gap-4">
         <div className="SKETCHBOOK-TITLE section-header text-black">
           {content.sketchbookPage.title}
@@ -104,5 +105,6 @@ export default function SketchbookPage({ navLight }) {
         })}
       </div>
     </div>
+    </>
   );
 }

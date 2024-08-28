@@ -47,7 +47,7 @@ export default function WorkDrawer({ project, toggle, open }) {
 
       <div className={dropdown}>
         <div className="overflow-hidden flex flex-row laptop:flex-col gap-4">
-          <div className="DESC-BTN-WRAPPER section-vert body-responsive gap-4">
+          <div className="DESC-BTN-WRAPPER flex flex-col body-responsive gap-4">
             {project.description}
             <Link className="max-w-fit" to={project.buttonUrl} target="_blank">
               <button className="small-button max-w-fit capitalize">
