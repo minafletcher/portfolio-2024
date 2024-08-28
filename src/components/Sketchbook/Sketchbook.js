@@ -38,7 +38,7 @@ export default function Sketchbook({
         id="sketchbook"
         className="SKETCHBOOK-ANCHOR relative section-b-padding"
       >
-        <div className="SKETCHBOOK-CONTAINER z-10 bg-black section-vert snap-scroll h-screen w-full min-h-screen justify-center section-px-sm gap-4">
+        <div className="SKETCHBOOK-CONTAINER z-10 bg-black section-vert snap-scroll screen-height justify-center section-px-sm gap-4">
           <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
             {content.sketchbook.header}
           </div>

@@ -33,7 +33,7 @@ export default function Experience({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="experience"
-      className="EXPERIENCE-ANCHOR section-b-padding"
+      className="EXPERIENCE-ANCHOR section-b-padding anchor-padding"
     >
       <div className="EXPERIENCE-CONTAINER snap-scroll section-vert justify-center section-px-lg">
         <div className="flex flex-row flex-wrap items-end justify-between">

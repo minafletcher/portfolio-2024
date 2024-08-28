@@ -30,7 +30,7 @@ export default function Skills({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="skills"
-      className="SKILLS-ANCHOR section-b-padding"
+      className="SKILLS-ANCHOR section-b-padding anchor-padding"
     >
       <div className="SKILLS-CONTAINER snap-scroll section-vert mobile:gap-0 laptop:gap-8 justify-center section-px-lg">
         <div className="HEADER-BODY-WRAPPER flex flex-col gap-4">
@@ -74,7 +74,7 @@ export default function Skills({ sectionKey, setDot }) {
           })}
         </div>
 
-        <div className="SKILLS-ICONS flex flex-row flex-wrap mobile:gap-8 tablet:gap-12 justify-center mobile:pt-2 tablet:pt-0">
+        <div className="SKILLS-ICONS flex flex-row flex-wrap mobile:gap-8 tablet:gap-12 justify-center mobile:pt-2 laptop:pt-0">
           {content.skills.skillsItems.map((item) => {
             const stateArray = [];
 

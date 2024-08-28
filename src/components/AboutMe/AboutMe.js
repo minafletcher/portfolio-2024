@@ -23,14 +23,14 @@ export default function AboutMe({ sectionKey, setDot }) {
     <div
       ref={containerRef}
       id="about"
-      className="ABOUT-ANCHOR relative section-b-padding"
+      className="ABOUT-ANCHOR relative section-b-padding anchor-padding"
     >
-      <div className="ABOUT-ME-CONTAINER snap-scroll flex mobile:flex-col laptop:flex-row mobile:gap-6 laptop:gap-12 justify-center items-center section-px-lg">
+      <div className="ABOUT-ME-CONTAINER snap-scroll flex mobile:flex-col laptop:flex-row mobile:gap-8 laptop:gap-12 justify-center items-center section-px-lg">
         <div className="ABOUT-ME-HEADER-MOBILE flex w-full justify-end section-header laptop:hidden">
           {content.aboutMe.header}
         </div>
 
-        <div className="HEADSHOT-TEXT-CONTAINER flex laptop:flex-row mobile:flex-col items-center mobile:gap-6 laptop:gap-12">
+        <div className="HEADSHOT-TEXT-CONTAINER flex laptop:flex-row mobile:flex-col items-center mobile:gap-8 laptop:gap-12">
           <img
             className="ABOUT-ME-HEADSHOT shrink-0 laptop:w-2/5 tablet:w-5/12 mobile:w-8/12 aspect-square max-w-md"
             src={content.aboutMe.imgUrl}

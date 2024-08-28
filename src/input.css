@@ -195,6 +195,14 @@
     .nav-small-link {
         @apply body-responsive font-mona text-black hover:italic
     }
+
+    .screen-height {
+        @apply mobile:h-[600px] tablet:h-[800px] laptop:h-screen laptop:min-h-[600px]
+    }
+
+    .anchor-padding {
+        @apply mobile:pt-32 laptop:pt-0
+    }
 }
 
 

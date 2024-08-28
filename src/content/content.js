@@ -86,26 +86,21 @@ const content = {
       },
       {
         key: 3,
-        id: "sketchbook",
-        text: "Sketchbook",
-      },
-      {
-        key: 4,
         id: "about",
         text: "About",
       },
       {
-        key: 5,
+        key: 4,
         id: "experience",
         text: "Experience",
       },
       {
-        key: 6,
+        key: 5,
         id: "skills",
         text: "Skills",
       },
       {
-        key: 7,
+        key: 6,
         id: "contact",
         text: "Contact",
       },
