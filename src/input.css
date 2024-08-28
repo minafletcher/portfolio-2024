@@ -4,12 +4,6 @@
 /* public sans + titillium web + works sans*/
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* I like Nacelle more than Geist for headers */
-/* I like Nacelle more than archivo */
-
-/* Work Sans or Hubot Sans for body ? */
-/* Nacelle or Mona Sans for header ? */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -220,6 +214,7 @@ body,
     overflow-y: auto;
     overscroll-behavior-y: contain;
     scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 
 /* Hamburger Menu */
