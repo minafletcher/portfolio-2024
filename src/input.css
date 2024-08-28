@@ -207,7 +207,7 @@ body,
     height: 100%;
     overflow-x: hidden;
     background-color: #FFFDF6;
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
