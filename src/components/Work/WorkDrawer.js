@@ -19,7 +19,7 @@ export default function WorkDrawer({ project, toggle, open }) {
   );
 
   const mobileImg = classNames(
-    "MOBILE-IMG mobile:basis-1/2 tablet:basis-1/4 laptop:hidden transition-all duration-400 ease-in-out",
+    "MOBILE-IMG tablet:basis-3/5 laptop:hidden transition-all duration-400 ease-in-out",
     {
       "opacity-100": open,
       "opacity-0": !open,
