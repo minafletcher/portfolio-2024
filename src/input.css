@@ -195,7 +195,7 @@
     }
 
     .anchor-padding {
-        @apply mobile:pt-20 tablet:pt-0
+        @apply mobile:pt-20 laptop:pt-0
     }
 }
 
