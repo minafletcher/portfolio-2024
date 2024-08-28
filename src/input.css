@@ -137,7 +137,7 @@
     }
 
     .snap-scroll {
-        @apply mobile:h-full tablet:h-screen tablet:snap-start laptop:min-h-[600px]
+        @apply mobile:h-full tablet:h-screen tablet:snap-start tablet:min-h-[600px]
     }
 
     .section-vert {
