@@ -27,14 +27,14 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
       <div className="FOOTER-CONTAINER z-10 bg-black section-vert snap-scroll screen-height h-fit laptop:min-h-screen justify-between gap-8 section-px-sm py-12">
-        <div className="FOOTER-TOP flex flex-col gap-4 mobile:pt-12 laptop:pt-16">
+        <div className="FOOTER-TOP flex flex-col gap-4 pt-16">
           <div className="FOOTER-TITLE text-white section-header">
             {content.footer.title}
           </div>
           <ContactForm></ContactForm>
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="FOOTER-BOTTOM flex flex-col gap-8">
           <div className="EMAIL-LINKS-WRAPPER flex flex-col gap-4">
             <div className="FOOTER-EMAIL text-white tablet:heading2-5 mobile:mobile-heading3">
               {content.footer.email}
