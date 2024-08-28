@@ -238,6 +238,7 @@ body,
 
 @layer utilities {
     .custom-screen-height {
-      min-height: calc(100vh - 100px);
+        /* so footer can scroll up to screen and show all content. subtracting height of navbar */
+      min-height: calc(100vh - 75px);
     }
   }
