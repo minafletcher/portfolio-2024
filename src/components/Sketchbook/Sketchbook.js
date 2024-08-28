@@ -38,7 +38,7 @@ export default function Sketchbook({
         id="sketchbook"
         className="SKETCHBOOK-ANCHOR relative"
       >
-        <div className="SKETCHBOOK-CONTAINER background-section justify-center gap-4">
+        <div className="SKETCHBOOK-CONTAINER min-h-[800px] background-section justify-center gap-4">
           <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
             {content.sketchbook.header}
           </div>

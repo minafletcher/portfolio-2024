@@ -131,7 +131,7 @@
     }
 
     .snap-scroll {
-        @apply mobile:h-fit laptop:h-screen laptop:snap-start laptop:min-h-[800px]
+        @apply mobile:h-full laptop:h-screen laptop:snap-start laptop:min-h-[800px]
     }
 
     .section-vert {
@@ -186,16 +186,12 @@
         @apply body-responsive font-mona text-black hover:italic
     }
 
-    .screen-height {
-        @apply h-screen mobile:custom-screen-height laptop:min-h-[800px]
-    }
-
     .anchor-padding {
         @apply mobile:pt-20 laptop:pt-0
     }
 
     .background-section {
-        @apply z-10 bg-black section-vert snap-scroll screen-height section-px-sm
+        @apply z-10 mobile:mt-20 laptop:mt-0 bg-black section-vert snap-scroll section-px-sm
     }
 }
 

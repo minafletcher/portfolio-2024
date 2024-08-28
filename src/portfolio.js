@@ -19,13 +19,14 @@ const Portfolio = ({
   dotsLight,
 }) => {
   return (
-    <div className="PORTFOLIO-CONTAINER flex flex-col mobile:gap-20 laptop:gap-0">
+    <div className="PORTFOLIO-CONTAINER">
       <HamburgerMenu
         sketchbook={false}
         setDot={setActiveDot}
         navLight={navLight}
       />
       <Dots setDot={setActiveDot} activeDot={activeDot} dotsLight={dotsLight} />
+      <div className="SECTION-PADDING flex flex-col mobile:gap-10 tablet:gap-20 laptop:gap-0">
       <Landing sectionKey={1} setDot={setActiveDot} />
       <Work sectionKey={2} setDot={setActiveDot} />
       <Sketchbook
@@ -43,6 +44,7 @@ const Portfolio = ({
             return location.pathname;
           }}
           /> */}
+          </div>
     </div>
   );
 
