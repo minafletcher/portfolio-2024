@@ -23,7 +23,7 @@ export default function Landing({ sectionKey, setDot }) {
       id="home"
       className="LANDING-ANCHOR"
     >
-      <div className="CONT-CANVAS snap-scroll min-h-[800px] grid grid-cols-[1fr] items-center top-0">
+      <div className="CONT-CANVAS snap-scroll h-screen min-h-[800px] grid grid-cols-[1fr] items-center top-0">
         <div className="LANDING-CONTAINER max-w-fit section-vert row-start-1 col-start-1 z-10 section-px-sm">
           <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
             {content.landing.name}
