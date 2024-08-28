@@ -7,11 +7,11 @@ export default function SkillsTag({ content, hoverState }) {
 
   return (
     <div
-      className={tagStyle + " hover:" + hoverState[1]}
+      className={tagStyle + " hover:bg-" + hoverState[1]}
       onMouseEnter={() => hoverState[0](true)}
       onMouseLeave={() => hoverState[0](false)}
     >
-      <div className="body laptop:py-1.5 laptop:px-6 mobile:py-1 mobile:px-4">
+      <div className="body-responsive laptop:py-1.5 laptop:px-6 mobile:py-1 mobile:px-4">
         {content}
       </div>
     </div>
