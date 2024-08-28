@@ -27,7 +27,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
       <div className="FOOTER-CONTAINER z-10 bg-black section-vert snap-scroll screen-height h-fit laptop:min-h-screen justify-between gap-8 section-px-sm py-12">
-        <div className="FOOTER-TOP flex flex-col gap-4 mobile:pt-12 mobile:pb-12 laptop:pt-16 laptop:pb-0">
+        <div className="FOOTER-TOP flex flex-col gap-4 mobile:pt-12 laptop:pt-16">
           <div className="FOOTER-TITLE text-white section-header">
             {content.footer.title}
           </div>
