@@ -131,7 +131,7 @@
     }
 
     .snap-scroll {
-        @apply mobile:h-full tablet:h-screen tablet:snap-start tablet:min-h-[600px]
+        @apply mobile:h-screen tablet:h-screen mobile:snap-start tablet:min-h-[600px]
     }
 
     .section-vert {
@@ -212,10 +212,8 @@ body,
     overflow-x: hidden;
     background-color: #FFFDF6;
     overflow-y: scroll;
-    /* overscroll-behavior-y: contain; */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 
 /* Hamburger Menu */
