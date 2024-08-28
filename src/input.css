@@ -197,7 +197,7 @@
     }
 
     .screen-height {
-        @apply h-screen mobile:min-h-screen tablet:min-h-screen laptop:min-h-[600px]
+        @apply h-screen mobile:custom-screen-height laptop:min-h-[600px]
     }
 
     .anchor-padding {
@@ -235,3 +235,9 @@ body,
     cursor: pointer;
     z-index: 10;
 }
+
+@layer utilities {
+    .custom-screen-height {
+      height: calc(100vh - 80px);
+    }
+  }
