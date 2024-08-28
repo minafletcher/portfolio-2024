@@ -213,7 +213,7 @@ body,
     background-color: #FFFDF6;
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 
