@@ -32,7 +32,7 @@ export default function Skills({ sectionKey, setDot }) {
       id="skills"
       className="SKILLS-ANCHOR section-b-padding"
     >
-      <div className="SKILLS-CONTAINER snap-scroll section-vert mobile:gap-4 laptop:gap-8 justify-center section-px-lg">
+      <div className="SKILLS-CONTAINER snap-scroll section-vert mobile:gap-0 laptop:gap-8 justify-center section-px-lg">
         <div className="HEADER-BODY-WRAPPER flex flex-col gap-4">
           <div className="SKILLS-HEADER section-header">
             {content.skills.header}
@@ -42,7 +42,7 @@ export default function Skills({ sectionKey, setDot }) {
           </div>
         </div>
 
-        <div className="SKILLS-TAGS flex flex-row flex-wrap gap-3 justify-center py-6">
+        <div className="SKILLS-TAGS flex flex-row flex-wrap gap-3 justify-center mobile:py-6 tablet:py-8">
           {content.skills.tags.map((interest) => {
             return (
               <SkillsTag
@@ -51,22 +51,22 @@ export default function Skills({ sectionKey, setDot }) {
                 content={interest.text}
                 hoverState={
                   interest.key == 1
-                    ? [setWebHover, "cyan"]
+                    ? [setWebHover, "hover:bg-cyan"]
                     : interest.key == 2
-                    ? [setUIHover, "pink"]
+                    ? [setUIHover, "hover:bg-pink"]
                     : interest.key == 3
-                    ? [setAnimHover, "yellow"]
+                    ? [setAnimHover, "hover:bg-yellow"]
                     : interest.key == 4
-                    ? [setCGHover, "red"]
+                    ? [setCGHover, "hover:bg-red"]
                     : interest.key == 5
-                    ? [setCCHover, "green"]
+                    ? [setCCHover, "hover:bg-green"]
                     : interest.key == 6
-                    ? [setGDHover, "blue"]
+                    ? [setGDHover, "hover:bg-blue"]
                     : interest.key == 7
-                    ? [setDesHover, "purple"]
+                    ? [setDesHover, "hover:bg-purple"]
                     : [
                         setPartyHover,
-                        "gradient-to-r from-pink via-yellow to-cyan",
+                        "hover:bg-gradient-to-r from-pink via-yellow to-cyan",
                       ]
                 }
               ></SkillsTag>
@@ -74,7 +74,7 @@ export default function Skills({ sectionKey, setDot }) {
           })}
         </div>
 
-        <div className="SKILLS-ICONS flex flex-row flex-wrap mobile:gap-8 tablet:gap-12 justify-center">
+        <div className="SKILLS-ICONS flex flex-row flex-wrap mobile:gap-8 tablet:gap-12 justify-center mobile:pt-2 tablet:pt-0">
           {content.skills.skillsItems.map((item) => {
             const stateArray = [];
 
