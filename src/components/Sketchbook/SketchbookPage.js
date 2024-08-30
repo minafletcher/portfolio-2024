@@ -55,7 +55,7 @@ export default function SketchbookPage({ navLight, setNavLight }) {
             <div
               className={
                 tagClick == 0 || tagClick == project.tagNum
-                  ? "flex flex-col gap-3"
+                  ? "flex flex-col gap-4"
                   : "hidden"
               }
             >
@@ -82,20 +82,22 @@ export default function SketchbookPage({ navLight, setNavLight }) {
                   </div>
                 )}
               </div>
-              <div className="PROJ-TITLE heading3-responsive text-black">
-                {project.title}
-              </div>
-              <div className="PROJ-TAGS flex flex-row gap-2">
-                {project.tags.map((tag) => {
-                  return <Tag content={tag.tag} size={1}></Tag>;
-                })}
+                <div className="TITLE-TAGS-WRAPPER flex flex-col gap-2">
+                    <div className="PROJ-TITLE heading3-responsive text-black">
+                    {project.title}
+                </div>
+                <div className="PROJ-TAGS flex flex-row gap-2">
+                    {project.tags.map((tag) => {
+                    return <Tag content={tag.tag} size={1}></Tag>;
+                    })}
+                </div>
               </div>
               <div className="PROJ-DESC body-responsive text-black">
                 {project.desc}
               </div>
               {project.buttonTxt ? (
                 <Link to={project.url} target="_blank">
-                  <div className="PROJ-LINK max-w-fit lg-button">
+                  <div className="PROJ-LINK max-w-fit small-button capitalize">
                     {project.buttonTxt}
                   </div>
                 </Link>
