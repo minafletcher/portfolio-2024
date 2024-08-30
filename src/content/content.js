@@ -755,7 +755,7 @@ const content = {
   sketchbookPage: {
     title: "My Sketchbook",
     description:
-      "Seen below are different sketches, experiments, and projects created to explore my interest in animation, creative coding, and the intersections between art and technology.",
+      "Highlighted below are some of my personal sketches and experiments, where I explore my interests in creative development, digital storytelling and the endless intersections of art and technology.",
     tags: [
       {
         key: 1,

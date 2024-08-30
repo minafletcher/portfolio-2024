@@ -16,12 +16,12 @@ export default function SketchbookPage({ navLight, setNavLight }) {
   return (
     <>
     <HamburgerMenu sketchbook={true} navLight={navLight} setNavLight={setNavLight} />
-    <div className="SKETCHBOOK-CONTAINER flex flex-col section-px-lg snap-start mobile:pt-24 tablet:pt-32 laptop:pt-40 laptop:pb-20">
+    <div className="SKETCHBOOK-CONTAINER flex flex-col section-px-lg laptop:snap-start mobile:pt-24 tablet:pt-32 laptop:pt-40 laptop:pb-20">
       <div className="TITLE-INFO-WRAPPER flex flex-col gap-4">
         <div className="SKETCHBOOK-TITLE section-header text-black">
           {content.sketchbookPage.title}
         </div>
-        <div className="SKETCHBOOK-DESC body-responsive text-black">
+        <div className="SKETCHBOOK-DESC body-responsive text-black mobile:w-full laptop:w-3/4">
           {content.sketchbookPage.description}
         </div>
         <div className="SKETCHBOOK-TAGS flex flex-row gap-4 items-center">
@@ -49,7 +49,7 @@ export default function SketchbookPage({ navLight, setNavLight }) {
           </div>
         </div>
       </div>
-      <div className="SKETCHBOOK-PROJECTS grid tablet:grid-cols-2 mobile:grid-cols-1 mobile:pt-12 laptop:pt-16 mobile:gap-16 laptop:gap-20">
+      <div className="SKETCHBOOK-PROJECTS grid tablet:grid-cols-2 mobile:grid-cols-1 pt-12 gap-16">
         {content.sketchbookPage.projects.map((project) => {
           return (
             <div
