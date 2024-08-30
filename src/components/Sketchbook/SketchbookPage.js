@@ -6,7 +6,7 @@ import SketchbookTag from "./SketchbookTag";
 import HamburgerMenu from "../Navbar/HamburgerMenu";
 import Tag from "../Tag";
 
-export default function SketchbookPage({ navLight }) {
+export default function SketchbookPage({ navLight, setNavLight }) {
   const [tagClick, setTagClick] = useState(0);
 
   const setTag = (key) => {
@@ -15,7 +15,7 @@ export default function SketchbookPage({ navLight }) {
 
   return (
     <>
-    <HamburgerMenu sketchbook={true} navLight={navLight} />
+    <HamburgerMenu sketchbook={true} navLight={navLight} setNavLight={setNavLight} />
     <div className="SKETCHBOOK-CONTAINER section-vert section-px-lg pt-40 pb-40 laptop:snap-start">
       <div className="TITLE-INFO-WRAPPER flex flex-col gap-4">
         <div className="SKETCHBOOK-TITLE section-header text-black">

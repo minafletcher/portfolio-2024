@@ -23,13 +23,8 @@ export default function Sketchbook({
     isVisible ? navToggle(true) : navToggle(false);
     isVisible ? setDot(sectionKey) : null;
     isVisible ? dotsMode(true) : dotsMode(false);
-
-    isVisible ? console.log("sketchbook visible") : null;
+    
   }, [containerRef, isVisible]);
-
-  const handleLinkClick = () => {
-    setNavLight(false);
-  };
 
   return (
     <div>
@@ -45,7 +40,6 @@ export default function Sketchbook({
           <Link
             className="max-w-fit"
             to="/sketchbook"
-            onClick={handleLinkClick}
           >
             <button className="lg-button-white">
               {content.sketchbook.button}

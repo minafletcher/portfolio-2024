@@ -1,14 +1,19 @@
 import content from "../../content/content";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import scrollViewHelper from "../helpers/scrollToView";
 import { useOutsideClick } from "../helpers/useOutsideClick";
 import HamburgerButton from "./HamburgerButton";
 import classNames from "classnames";
 
-export default function HamburgerMenu({ sketchbook, setDot, navLight }) {
+export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLight }) {
   // control menu's state
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // always set nav light to false on page load
+  useEffect(() => {
+    setNavLight(false)
+  }, []);
 
   // scroll to clicked linked
   function hamScroll(id, index, closeDrawer) {

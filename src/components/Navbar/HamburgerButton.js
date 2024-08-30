@@ -1,11 +1,7 @@
 import { motion, MotionConfig } from "framer-motion";
 import classNames from "classnames";
-import { useMediaQuery } from "../helpers/useMediaQuery";
 
 export default function HamburgerButton({ isNavOpen, setIsNavOpen, navLight }) {
-  // const useLaptop = () => useMediaQuery('(min-width: 1240px)');
-
-  // const isLaptop = useLaptop()
 
   const handleOnClick = () => {
     setIsNavOpen((prev) => !prev);

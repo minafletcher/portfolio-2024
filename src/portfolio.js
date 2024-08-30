@@ -23,6 +23,7 @@ const Portfolio = ({
       <HamburgerMenu
         sketchbook={false}
         setDot={setActiveDot}
+        setNavLight={setNavLight}
         navLight={navLight}
       />
       <Dots setDot={setActiveDot} activeDot={activeDot} dotsLight={dotsLight} />
@@ -39,53 +40,9 @@ const Portfolio = ({
       <AboutMe sectionKey={4} setDot={setActiveDot} />
       <Experience sectionKey={5} setDot={setActiveDot} />
       <Skills sectionKey={6} setDot={setActiveDot} />
-      {/* <ScrollRestoration 
-        getKey={(location, matches) => {
-            return location.pathname;
-          }}
-          /> */}
           </div>
     </div>
   );
-
-  // FULLPAGE JS LIBRARY
-
-  // return(
-
-  // <ReactFullpage
-  //   //fullpage options
-  //   licenseKey = {'YOUR_KEY_HERE'}
-  //   scrollingSpeed = {1000} /* Options here */
-
-  //   render={({ state, fullpageApi }) => {
-  //     return (
-  //         <>
-  //         <Navbar />
-  //         <ReactFullpage.Wrapper>
-  //             <div className="section">
-  //             <Landing />
-  //             </div>
-  //             <div className="section">
-  //             <Work />
-  //             </div>
-  //             <div className="section">
-  //             <AboutMe />
-  //             </div>
-  //             <div className="section">
-  //             <Experience />
-  //             </div>
-  //             <div className="section">
-  //             <Skills />
-  //             </div>
-  //             <div className="section">
-  //             <Footer />
-  //             </div>
-  //         </ReactFullpage.Wrapper>
-  //         </>
-  //     );
-  //   }}
-  //   />
-  // )
 };
 
 export default Portfolio;

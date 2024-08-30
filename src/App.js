@@ -1,14 +1,6 @@
 import { useState } from "react";
 
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Outlet,
-  Route,
-  RouterProvider,
-  BrowserRouter,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import ScrollToTop from "./components/helpers/scrollToTop";
 import Portfolio from "./portfolio";
@@ -29,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <ScrollToTop />
       <div>
         <Routes>
@@ -49,8 +41,22 @@ export default function App() {
           ></Route>
           <Route
             path="/sketchbook"
-            element={<SketchbookPage navLight={navLight} />}
+            element={<SketchbookPage navLight={navLight} setNavLight={setNavLight} />}
           ></Route>
+          <Route
+            path="*"
+            element={
+              <Portfolio
+                navToggle={navToggle}
+                setNavLight={setNavLight}
+                navLight={navLight}
+                dotsMode={dotsMode}
+                setActiveDot={setActiveDot}
+                activeDot={activeDot}
+                dotsLight={dotsLight}
+              />
+            }
+          />
         </Routes>
         <Footer
           sectionKey={7}
@@ -59,6 +65,6 @@ export default function App() {
           dotsMode={dotsMode}
         />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
