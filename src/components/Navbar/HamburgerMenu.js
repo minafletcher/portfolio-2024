@@ -39,9 +39,9 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
   );
 
   const navOverlay = classNames(
-    "absolute flex flex-col gap-8 z-50 w-fit h-fit right-0 bg-white flex flex-col px-10 py-8 transition-all duration-300 ease-in-out drop-shadow-md",
+    "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-fit h-fit right-0 bg-white flex flex-col px-6 py-8 transition-all duration-300 ease-in-out drop-shadow-md",
     {
-      "opacity-90 cursor-events-auto visible translate-y-0": isNavOpen,
+      "opacity-95 cursor-events-auto visible translate-y-0": isNavOpen,
       "opacity-0 cursor-events-none invisible translate-y-3": !isNavOpen,
     }
   );
@@ -83,7 +83,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
         </div>
 
         <div ref={hamRef} className={navOverlay}>
-          <div className="MENU-LINKS flex flex-col gap-2 items-start justify-between heading3 text-black font-bold font-mona">
+          <div className="MENU-LINKS flex flex-col gap-1.5 items-start justify-between nav-lg-link">
             {sketchbook ? (
               <Link to="/">
                 <div className="BURGER-LINK hover:italic uppercase cursor-pointer">
@@ -92,7 +92,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
               </Link>
             ) : (
               content.navbar.links.map((sectionLink) => {
-                return sectionLink.key != 1 ? (
+                return sectionLink.key != 1 && sectionLink.key != 3 ? (
                   <div
                     key={sectionLink.key}
                     className="BURGER-LINK hover:italic uppercase cursor-pointer"
@@ -107,7 +107,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
             )}
           </div>
           <div className="MENU-LINE w-full bg-black h-0.5"></div>
-          <div className="MENU-CONTACT flex flex-col gap-2">
+          <div className="MENU-CONTACT flex flex-col gap-1.5">
             {content.navbar.smallLinks.map((link) => {
               return (
                 <Link

@@ -34,11 +34,11 @@ export default function Dot({ dotKey, dotId, setDot, activeDot, dotsLight }) {
   );
 
   const dotName = classNames(
-    "body cursor-default text-black font-rubik font-bold capitalize transition-all delay-300 duration-200 ease-in-out",
+    "body cursor-default text-black font-mona capitalize transition-all duration-100 ease-in-out",
     {
-      "block opacity-100": dotHovering,
+      "visible opacity-100 cursor-events-auto": dotHovering,
       "text-white": dotsLight,
-      "hidden opacity-0": !dotHovering,
+      "invisible opacity-0 cursor-events-none": !dotHovering,
     }
   );
 

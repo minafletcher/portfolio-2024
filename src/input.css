@@ -182,6 +182,10 @@
         @apply cursor-pointer w-fit border-2 rounded-md border-white text-white tablet:heading2-5 mobile:mobile-heading3 uppercase py-2 px-10 hover:text-black hover:bg-white transition-all duration-200
     }
 
+    .nav-lg-link {
+        @apply text-18 font-mona font-bold text-black
+    }
+
     .nav-small-link {
         @apply body-responsive font-mona text-black hover:italic
     }
