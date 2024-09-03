@@ -122,11 +122,6 @@ const content = {
         url: "/Mina-Fletcher-Resume.pdf",
         target: "_blank",
       },
-      {
-        key: 3,
-        text: "mina@minaparisfletcher.com",
-        url: "mailto:mina@minaparisfletcher.com",
-      },
     ],
   },
 

@@ -39,7 +39,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
   );
 
   const navOverlay = classNames(
-    "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-fit h-fit right-0 bg-white flex flex-col px-6 py-8 transition-all duration-300 ease-in-out drop-shadow-md",
+    "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-64 right-0 bg-white flex flex-col px-6 py-8 transition-all duration-300 ease-in-out drop-shadow-md",
     {
       "opacity-95 cursor-events-auto visible translate-y-0": isNavOpen,
       "opacity-0 cursor-events-none invisible translate-y-3": !isNavOpen,
@@ -106,7 +106,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
               })
             )}
           </div>
-          <div className="MENU-LINE w-full bg-black h-0.5"></div>
+          <div className="MENU-LINE w-full border-black border-b-2"></div>
           <div className="MENU-CONTACT flex flex-col gap-1.5">
             {content.navbar.smallLinks.map((link) => {
               return (
