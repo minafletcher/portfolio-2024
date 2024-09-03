@@ -41,7 +41,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
   const navOverlay = classNames(
     "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-[275px] right-0 bg-white flex flex-col p-8 transition-all duration-300 ease-in-out drop-shadow-md",
     {
-      "opacity-95 cursor-events-auto visible translate-y-0": isNavOpen,
+      "opacity-100 cursor-events-auto visible translate-y-0": isNavOpen,
       "opacity-0 cursor-events-none invisible translate-y-3": !isNavOpen,
     }
   );
@@ -58,7 +58,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
 
   return (
     <div className="NAV-HAM-WRAPPER">
-      <div className="NAV-MOBILE-BANNER mobile:block laptop:hidden top-0 fixed z-40 w-full bg-white opacity-90 mobile:h-16 tablet:h-18"></div>
+      <div className="NAV-MOBILE-BANNER mobile:block laptop:hidden top-0 fixed z-40 w-full bg-white opacity-100 mobile:h-16 tablet:h-18"></div>
       <div className={navLanding}>
         {sketchbook ? (
           <Link to="/">
