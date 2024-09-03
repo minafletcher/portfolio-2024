@@ -183,11 +183,11 @@
     }
 
     .nav-lg-link {
-        @apply text-18 font-mona font-bold text-black
+        @apply text-20 font-mona font-bold text-black
     }
 
     .nav-small-link {
-        @apply body-responsive font-mona text-black hover:italic
+        @apply text-18 font-mona text-black hover:italic
     }
 
     .anchor-padding {

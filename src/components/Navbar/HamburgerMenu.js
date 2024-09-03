@@ -39,7 +39,7 @@ export default function HamburgerMenu({ sketchbook, setDot, setNavLight, navLigh
   );
 
   const navOverlay = classNames(
-    "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-64 right-0 bg-white flex flex-col px-6 py-8 transition-all duration-300 ease-in-out drop-shadow-md",
+    "OVERLAY-CONTAINER absolute flex flex-col gap-6 z-50 w-[275px] right-0 bg-white flex flex-col p-8 transition-all duration-300 ease-in-out drop-shadow-md",
     {
       "opacity-95 cursor-events-auto visible translate-y-0": isNavOpen,
       "opacity-0 cursor-events-none invisible translate-y-3": !isNavOpen,
