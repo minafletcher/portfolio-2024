@@ -45,7 +45,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
       <div className="FOOTER-MARGIN relative background-margin-offset">
-      <div className="FOOTER-CONTAINER w-full h-fit min-h-screen background-section justify-between gap-8 py-12 pt-24">
+      <div className="FOOTER-CONTAINER w-full h-fit mobile:min-h-[90vh] laptop:min-h-screen overflow-hidden background-section justify-between gap-8 py-12 pt-24">
           <div className="FOOTER-TOP flex flex-col gap-4">
           <div className="FOOTER-TITLE text-white section-header">
             {content.footer.title}
