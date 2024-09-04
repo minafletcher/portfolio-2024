@@ -23,7 +23,6 @@ export default function Sketchbook({
     isVisible ? navToggle(true) : navToggle(false);
     isVisible ? setDot(sectionKey) : null;
     isVisible ? dotsMode(true) : dotsMode(false);
-    
   }, [containerRef, isVisible]);
 
   return (
@@ -33,20 +32,21 @@ export default function Sketchbook({
         id="sketchbook"
         className="SKETCHBOOK-ANCHOR relative"
       >
-        <div className="SKETCHBOOK-CONTAINER h-screen min-h-[600px] background-section justify-center gap-4 section-margin-offset">
-          <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
-            {content.sketchbook.header}
+        <div className="SKETCHBOOK-MARGIN relative background-margin-offset">
+          <div className="SKETCHBOOK-CONTAINER background-section h-screen min-h-[600px] justify-center gap-4">
+            <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
+              {content.sketchbook.header}
+            </div>
+            <Link className="max-w-fit" to="/sketchbook">
+              <button className="lg-button-white">
+                {content.sketchbook.button}
+              </button>
+            </Link>
           </div>
-          <Link
-            className="max-w-fit"
-            to="/sketchbook"
-          >
-            <button className="lg-button-white">
-              {content.sketchbook.button}
-            </button>
-          </Link>
+          <div className="z-0 w-full h-full">
+            <ReactP5Wrapper sketch={animation}></ReactP5Wrapper>
+          </div>
         </div>
-        {/* <div className="relative z-0 w-full h-full"><ReactP5Wrapper sketch={animation}></ReactP5Wrapper></div> */}
       </div>
     </div>
   );

@@ -195,12 +195,17 @@
     }
 
     .background-section {
-        @apply flex flex-col z-10 bg-black snap-scroll section-px-sm mobile:mt-24 tablet:mt-32 laptop:mt-20
+        @apply absolute flex flex-col snap-scroll z-10 section-px-sm
     }
 
     .section-margin-offset {
         @apply mobile:mb-5 tablet:mb-12 laptop:mb-20
     }
+
+    .background-margin-offset {
+        @apply mobile:mt-24 tablet:mt-32 laptop:mt-20
+    }
+
 }
 
 

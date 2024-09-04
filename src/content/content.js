@@ -1,3 +1,6 @@
+// ---- Page Image Imports ---- //
+import DotGrid from "./img/dot-grid-1.svg";
+
 // ---- About Me Image Import ---- //
 import HeadshotGif from "./img/mina-headshot-24.gif";
 
@@ -10,17 +13,9 @@ import ExternalLink from "./img/svgs/external-link-icon.svg";
 // ---- Skills Web Development ---- //
 import ReactIcon from "./img/svgs/react-icon.svg";
 import JSIcon from "./img/svgs/js-ts-icon.svg";
-//import TSIcon from "./img/typescript-icon.svg";
 import WebflowIcon from "./img/svgs/webflow-icon.svg";
-// import HTMLIcon from "./img/html-icon.svg";
-// import CSSIcon from "./img/css-sass-icon.svg";
-// import SassIcon from "./img/sass-icon.svg";
 import TailwindIcon from "./img/svgs/tailwind-icon.svg";
 import AngularIcon from "./img/svgs/angular-icon.svg";
-// import GitIcon from "./img/git-icon.svg";
-// import GatsbyIcon from "./img/gatsby-icon.svg";
-// import SquarespaceIcon from "./img/squarespace-icon.svg";
-// import PrismicIcon from "./img/prismic-icon.svg";
 
 // ---- Skills Computer Graphics / Animation ---- //
 import ThreeJsIcon from "./img/svgs/threejs-icon.svg";
@@ -62,6 +57,8 @@ import KandinskyImg from "./img/sketchbook-images/kandinsky-painter.png";
 import NoisyImg from "./img/sketchbook-images/noisy-image.png";
 import PatternImg from "./img/sketchbook-images/iterative-pattern.png";
 
+
+
 const tags = {
   // ---- Project Tags ---- //
   tagUX: "UI/UX",
@@ -70,6 +67,11 @@ const tags = {
 };
 
 const content = {
+  page: {
+    dotUrl: DotGrid,
+    dotAlt: "Dot Grid Image",
+  },
+  
   // ---- NavBar ---- //
   navbar: {
     homeText: "Home",

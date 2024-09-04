@@ -36,7 +36,7 @@ export default function Experience({ sectionKey, setDot }) {
       className="EXPERIENCE-ANCHOR anchor-padding"
     >
       <div className="EXPERIENCE-CONTAINER snap-scroll section-vert justify-center section-px-lg">
-        <div className="flex flex-row flex-wrap items-end justify-between">
+        <div className="HEADER-RESUME-WRAPPER z-10 flex flex-row flex-wrap items-end justify-between">
           <div className="EXPERIENCE-HEADER section-header">
             {content.experience.header}
           </div>
@@ -55,7 +55,7 @@ export default function Experience({ sectionKey, setDot }) {
           </div>
         </div>
 
-        <div className="EXPERIENCE-BLOCKS mt-6 flex flex-col gap-4">
+        <div className="EXPERIENCE-BLOCKS z-10 mt-6 flex flex-col gap-4">
           {content.experience.experienceBlocks.map((block) => {
             return (
               <Dropdown
@@ -68,6 +68,13 @@ export default function Experience({ sectionKey, setDot }) {
               ></Dropdown>
             );
           })}
+        </div>
+        <div className="BACKGROUND-DOTS absolute z-0 flex w-full items-end justify-center">
+          <img
+            className="mobile:w-60 tablet:w-80 mobile:ml-60 tablet:ml-72 mobile:-mb-[425px] laptop:-mb-[475px]"
+            src={content.page.dotUrl}
+            alt={content.page.dotAlt}
+          ></img>
         </div>
       </div>
     </div>

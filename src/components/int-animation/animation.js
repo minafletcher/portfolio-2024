@@ -10,19 +10,19 @@ export const animation = (p) => {
     simplex = new SimplexNoise();
 
     noiseImg1 = p.createImage(p.int(p.width / 2), p.int(p.height / 2));
-    noiseImg2 = p.createImage(p.int(p.width / 2), p.int(p.height / 2));
+    // noiseImg2 = p.createImage(p.int(p.width / 2), p.int(p.height / 2));
 
     noiseImg1.loadPixels();
-    noiseImg2.loadPixels();
+    // noiseImg2.loadPixels();
   };
 
   p.draw = () => {
-    p.background(0);
+    p.background('#353532');
     t += 0.001;
 
-    for (let rows = 0; rows < p.height * 2; rows += 4) {
-      for (let cols = 0; cols < p.width * 2; cols += 4) {
-        const n = simplex.noise3D(cols / 600, rows / 600, t) * 0.5 + 0.5;
+    for (let rows = 0; rows < p.height * 2; rows += 8) {
+      for (let cols = 0; cols < p.width * 2; cols += 6) {
+        const n = simplex.noise3D(cols / 1200, rows / 1200, t) * 0.5 + 0.5;
 
         let index = cols + rows * p.width;
         // let indexMouse = mouseX + mouseY * p.width;
@@ -43,24 +43,24 @@ export const animation = (p) => {
         //     // noiseImg2.pixels[index + 3] = 255-255-(n+0.7)*255;
         // }
         // else {
-        noiseImg1.pixels[index + 0] = 255 - n * 250;
-        noiseImg1.pixels[index + 1] = n * 255;
-        noiseImg1.pixels[index + 2] = 200 / n;
+        noiseImg1.pixels[index + 0] = 0;
+        noiseImg1.pixels[index + 1] = 0;
+        noiseImg1.pixels[index + 2] = 0;
         noiseImg1.pixels[index + 3] = 255 * p.floor(n + 0.5);
 
-        noiseImg2.pixels[index + 0] = 255 - n * 250;
-        noiseImg2.pixels[index + 1] = n * 255;
-        noiseImg2.pixels[index + 2] = 200 / n;
-        noiseImg2.pixels[index + 3] = 255 - (n + 0.7) * 255;
+        // noiseImg2.pixels[index + 0] = 255 - n * 250;
+        // noiseImg2.pixels[index + 1] = n * 255;
+        // noiseImg2.pixels[index + 2] = 200 / n;
+        // noiseImg2.pixels[index + 3] = 255 - (n + 0.7) * 255;
         // }
       }
     }
 
     noiseImg1.updatePixels();
-    noiseImg2.updatePixels();
+    // noiseImg2.updatePixels();
 
     p.image(noiseImg1, 0, 0, p.width, p.height);
-    p.image(noiseImg2, 0, 0, p.width, p.height);
+    // p.image(noiseImg2, 0, 0, p.width, p.height);
   };
 };
 

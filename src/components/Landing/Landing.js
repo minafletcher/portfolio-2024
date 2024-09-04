@@ -41,13 +41,13 @@ export default function Landing({ sectionKey, setDot }) {
             {content.landing.button}
           </button>
         </div>
-        <Canvas
+        {/* <Canvas
           className="CANVAS relative row-start-1 col-start-1"
           orthographic
           camera={{ zoom: 150, position: [0, 0, 100] }}
         >
           <Experience />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );

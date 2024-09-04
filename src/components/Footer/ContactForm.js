@@ -17,7 +17,7 @@ export default function ContactForm() {
   }
 
   const formInput = classNames(
-    "bg-black border-b-2 border-white text-white body-responsive py-3 outline-none placeholder:opacity-100 placeholder:text-white placeholder:body-responsive focus:placeholder:opacity-50"
+    "bg-black border-b-2 border-white text-white body-responsive p-3 outline-none placeholder:opacity-100 placeholder:text-white placeholder:body-responsive focus:placeholder:opacity-50"
   );
 
   return (
