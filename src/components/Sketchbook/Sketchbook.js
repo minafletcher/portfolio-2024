@@ -1,6 +1,6 @@
 import content from "../../content/content";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import { animation } from "../int-animation/animation.js";
@@ -25,6 +25,24 @@ export default function Sketchbook({
     isVisible ? dotsMode(true) : dotsMode(false);
   }, [containerRef, isVisible]);
 
+    // access page dimensions and handle resize
+    const [dimensions, setDimensions] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+      };
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
   return (
     <div>
       <div
@@ -43,8 +61,8 @@ export default function Sketchbook({
               </button>
             </Link>
           </div>
-          <div className="z-0 w-full h-full">
-            <ReactP5Wrapper sketch={animation}></ReactP5Wrapper>
+          <div className="relative z-0">
+            <ReactP5Wrapper sketch={animation} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import LinkedInIcon from "../../content/img/svgs/linked-in-icon.svg?react";
 import GithubIcon from "../../content/img/svgs/github-icon.svg?react";
 import BehanceIcon from "../../content/img/svgs/behance-icon.svg?react";
 import ResumeIcon from "../../content/img/svgs/resume-icon.svg?react";
-import { useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import ContactForm from "./ContactForm";
 import { ReactP5Wrapper } from "react-p5-wrapper";
@@ -23,6 +23,24 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
     isVisible ? setDot(sectionKey) : null;
     isVisible ? dotsMode(true) : dotsMode(false);
   }, [containerRef, isVisible]);
+
+  // access page dimensions and handle resize
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
@@ -63,7 +81,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
         </div>
       </div>
       </div>
-      <div className="relative z-0 w-full h-full"><ReactP5Wrapper sketch={animation}></ReactP5Wrapper></div>
+      <div className="relative z-0"><ReactP5Wrapper sketch={animation} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper></div>
     </div>
   );
 }
