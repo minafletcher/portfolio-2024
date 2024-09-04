@@ -1,7 +1,10 @@
-export const animation = (p) => {
+export default function NoiseSketch(p, props) {
   let simplex,
     noiseImg,
     t = 0;
+
+  let height = p.windowHeight;
+  let width = p.windowWidth;
 
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
@@ -17,8 +20,8 @@ export const animation = (p) => {
     p.background('#353532');
     t += 0.001;
 
-    for (let rows = 0; rows < p.height * 2; rows += 8) {
-      for (let cols = 0; cols < p.width * 2; cols += 6) {
+    for (let rows = 0; rows < height * 2; rows += 8) {
+      for (let cols = 0; cols < width * 2; cols += 6) {
         const n = simplex.noise3D(cols / 1200, rows / 1200, t) * 0.5 + 0.5;
 
         let index = cols + rows * p.width;
@@ -35,5 +38,9 @@ export const animation = (p) => {
 
     p.image(noiseImg, 0, 0, p.width, p.height);
   };
+
+  // p.windowResized = () => {
+  //   p.resizeCanvas(p.windowWidth, p.windowHeight);
+  // };
 };
 

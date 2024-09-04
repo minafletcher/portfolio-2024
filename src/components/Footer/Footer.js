@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import ContactForm from "./ContactForm";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import { animation } from "../int-animation/animation.js";
+import NoiseSketch from "../int-animation/NoiseSketch.js";
 
 export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   // checks throughout run that footer is visible. if yes, show nav white, if no, show nav black
@@ -44,8 +44,8 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
 
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
-      <div className="FOOTER-MARGIN relative background-margin-offset">
-      <div className="FOOTER-CONTAINER w-full h-fit mobile:min-h-[90vh] laptop:min-h-screen overflow-hidden background-section justify-between gap-8 py-12 pt-24">
+      <div className="FOOTER-MARGIN relative snap-scroll background-margin-offset overflow-hidden">
+      <div className="FOOTER-CONTAINER h-fit mobile:min-h-[90vh] laptop:min-h-screen background-section justify-between gap-8 py-12 pt-24">
           <div className="FOOTER-TOP flex flex-col gap-4">
           <div className="FOOTER-TITLE text-white section-header">
             {content.footer.title}
@@ -80,8 +80,9 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
           </div>
         </div>
       </div>
+      <div className="relative z-0 w-full h-full"><ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper></div>
       </div>
-      <div className="relative z-0"><ReactP5Wrapper sketch={animation} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper></div>
+      
     </div>
   );
 }

@@ -195,7 +195,7 @@
     }
 
     .background-section {
-        @apply absolute flex flex-col snap-scroll z-10 section-px-sm
+        @apply absolute flex flex-col w-full h-full z-10 section-px-sm
     }
 
     .section-margin-offset {

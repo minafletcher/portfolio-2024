@@ -3,7 +3,7 @@ import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import { animation } from "../int-animation/animation.js";
+import NoiseSketch from "../int-animation/NoiseSketch.js";
 
 export default function Sketchbook({
   sectionKey,
@@ -50,8 +50,8 @@ export default function Sketchbook({
         id="sketchbook"
         className="SKETCHBOOK-ANCHOR relative"
       >
-        <div className="SKETCHBOOK-MARGIN relative background-margin-offset">
-          <div className="SKETCHBOOK-CONTAINER background-section h-screen min-h-[600px] justify-center gap-4">
+        <div className="SKETCHBOOK-MARGIN relative snap-scroll background-margin-offset overflow-hidden h-screen min-h-[600px]">
+          <div className="SKETCHBOOK-CONTAINER background-section justify-center gap-4">
             <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
               {content.sketchbook.header}
             </div>
@@ -61,8 +61,8 @@ export default function Sketchbook({
               </button>
             </Link>
           </div>
-          <div className="relative z-0">
-            <ReactP5Wrapper sketch={animation} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper>
+          <div className="relative z-0 w-full">
+            <ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper>
           </div>
         </div>
       </div>
