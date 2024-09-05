@@ -4,11 +4,12 @@ import LinkedInIcon from "../../content/img/svgs/linked-in-icon.svg?react";
 import GithubIcon from "../../content/img/svgs/github-icon.svg?react";
 import BehanceIcon from "../../content/img/svgs/behance-icon.svg?react";
 import ResumeIcon from "../../content/img/svgs/resume-icon.svg?react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import ContactForm from "./ContactForm";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import NoiseSketch from "../int-animation/NoiseSketch.js";
+import useWindowSize from "../helpers/useWindowSize";
 
 export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   // checks throughout run that footer is visible. if yes, show nav white, if no, show nav black
@@ -25,26 +26,11 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   }, [containerRef, isVisible]);
 
   // access page dimensions and handle resize
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const dimensions = useWindowSize();
 
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
-      <div className="FOOTER-MARGIN relative snap-scroll background-margin-offset overflow-hidden">
+      <div className="FOOTER-MARGIN relative snap-scroll background-margin-offset">
       <div className="FOOTER-CONTAINER h-fit mobile:min-h-[90vh] laptop:min-h-screen background-section justify-between gap-8 py-12 pt-24">
           <div className="FOOTER-TOP flex flex-col gap-4">
           <div className="FOOTER-TITLE text-white section-header">
@@ -80,7 +66,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
           </div>
         </div>
       </div>
-      <div className="relative z-0 w-full h-full"><ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper></div>
+      <div className="CUSTOM-P5-WRAPPER p5-wrapper"><ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper></div>
       </div>
       
     </div>

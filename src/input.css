@@ -206,6 +206,10 @@
         @apply mobile:mt-24 tablet:mt-32 laptop:mt-20
     }
 
+    .p5-wrapper {
+        @apply flex justify-center items-center z-0 w-full h-full bg-black overflow-hidden;
+    }
+
 }
 
 

@@ -27,11 +27,11 @@ export default function Sketchbook({
     isVisible ? dotsMode(true) : dotsMode(false);
   }, [containerRef, isVisible]);
 
-    // access page dimensions and handle resize
-const dimensions = useWindowSize();
+  // access page dimensions and handle resize
+  const dimensions = useWindowSize();
 
-// if dimensions.windowChangeW > 0, window is growing larger. scale
-// if window change >=0, window is growing smaller. stay the same and overflow-hidden
+  // if dimensions.windowChangeW > 0, window is growing larger. scale
+  // if window change >=0, window is growing smaller. stay the same and overflow-hidden
 
   return (
     <div>
@@ -45,14 +45,18 @@ const dimensions = useWindowSize();
             <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
               {content.sketchbook.header}
             </div>
-            <Link className="max-w-fit" to="/sketchbook">
+            <Link className="SKETCHBOOK-BUTTON max-w-fit" to="/sketchbook">
               <button className="lg-button-white">
                 {content.sketchbook.button}
               </button>
             </Link>
           </div>
-          <div className="relative z-0 w-full h-full bg-black overflow-hidden">
-            <ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper>
+          <div className="CUSTOM-P5-WRAPPER p5-wrapper">
+            <ReactP5Wrapper
+              sketch={NoiseSketch}
+              width={dimensions.width}
+              height={dimensions.height}
+            ></ReactP5Wrapper>
           </div>
         </div>
       </div>
