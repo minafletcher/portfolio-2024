@@ -1,9 +1,11 @@
 import content from "../../content/content";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import NoiseSketch from "../int-animation/NoiseSketch.js";
+import useWindowSize from "../helpers/useWindowSize";
+import classNames from "classnames";
 
 export default function Sketchbook({
   sectionKey,
@@ -26,22 +28,10 @@ export default function Sketchbook({
   }, [containerRef, isVisible]);
 
     // access page dimensions and handle resize
-    const [dimensions, setDimensions] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight
-    });
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight
-        });
-      };
-  
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+const dimensions = useWindowSize();
+
+// if dimensions.windowChangeW > 0, window is growing larger. scale
+// if window change >=0, window is growing smaller. stay the same and overflow-hidden
 
   return (
     <div>
@@ -61,7 +51,7 @@ export default function Sketchbook({
               </button>
             </Link>
           </div>
-          <div className="relative z-0 w-full">
+          <div className="relative z-0 w-full h-full bg-black overflow-hidden">
             <ReactP5Wrapper sketch={NoiseSketch} width={dimensions.width} height={dimensions.height}></ReactP5Wrapper>
           </div>
         </div>
