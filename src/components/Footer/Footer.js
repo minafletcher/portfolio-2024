@@ -38,7 +38,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
             height={dimensions.height}
           ></ReactP5Wrapper>
         </div>
-        <div className="FOOTER-CONTAINER h-fit mobile:min-h-[90vh] laptop:min-h-screen background-section justify-between gap-8 pt-24 pb-12">
+        <div className="FOOTER-CONTAINER h-fit mobile:min-h-[90vh] tablet:min-h-screen background-section justify-between gap-8 pt-24 pb-12">
           <div className="FOOTER-TOP flex flex-col gap-4">
             <div className="FOOTER-TITLE text-white section-header">
               {content.footer.title}
