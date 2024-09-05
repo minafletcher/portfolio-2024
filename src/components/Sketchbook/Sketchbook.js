@@ -40,7 +40,7 @@ export default function Sketchbook({
         id="sketchbook"
         className="SKETCHBOOK-ANCHOR relative"
       >
-        <div className="SKETCHBOOK-MARGIN relative snap-scroll background-margin-offset section-margin-offset overflow-hidden mobile:h-[90vh] laptop:h-screen min-h-[600px]">
+        <div className="SKETCHBOOK-MARGIN relative snap-scroll background-margin-offset section-margin-offset overflow-hidden mobile:h-[90vh] tablet:h-screen min-h-[600px]">
           <div className="SKETCHBOOK-CONTAINER background-section justify-center gap-4">
             <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
               {content.sketchbook.header}
