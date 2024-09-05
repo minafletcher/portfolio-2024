@@ -41,6 +41,13 @@ export default function Sketchbook({
         className="SKETCHBOOK-ANCHOR relative"
       >
         <div className="SKETCHBOOK-MARGIN relative snap-scroll background-margin-offset section-margin-offset overflow-hidden mobile:h-[90vh] tablet:h-screen min-h-[600px]">
+        <div className="CUSTOM-P5-WRAPPER p5-wrapper">
+            <ReactP5Wrapper
+              sketch={NoiseSketch}
+              width={dimensions.width}
+              height={dimensions.height}
+            ></ReactP5Wrapper>
+          </div>
           <div className="SKETCHBOOK-CONTAINER background-section justify-center gap-4">
             <div className="SKETCHBOOK-HEADER text-white heading1-responsive">
               {content.sketchbook.header}
@@ -50,13 +57,6 @@ export default function Sketchbook({
                 {content.sketchbook.button}
               </button>
             </Link>
-          </div>
-          <div className="CUSTOM-P5-WRAPPER p5-wrapper">
-            <ReactP5Wrapper
-              sketch={NoiseSketch}
-              width={dimensions.width}
-              height={dimensions.height}
-            ></ReactP5Wrapper>
           </div>
         </div>
       </div>
