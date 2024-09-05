@@ -1,5 +1,5 @@
 // ---- Page Image Imports ---- //
-import DotGrid from "./img/dot-grid-1.svg";
+import DotGrid from "./img/svgs/dot-grid-cmyk-3.svg";
 
 // ---- About Me Image Import ---- //
 import HeadshotGif from "./img/mina-headshot-24.gif";
