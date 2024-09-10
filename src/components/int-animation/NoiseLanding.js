@@ -2,19 +2,13 @@ export default function NoiseLanding(p, props) {
 
   let pg;
   p.setup = () => {
+
+    p.pixelDensity(1)
     p.createCanvas(p.windowWidth, p.windowHeight);
     pg = p.createGraphics(p.windowWidth, p.windowHeight);
 
     // draw all objects relative to center of the screen
     pg.translate(p.windowWidth/2,p.windowHeight/2);
-
-    console.log("window width:" + p.windowWidth)
-    console.log("pg width:" + pg.width)
-
-    console.log("window height:" + p.windowHeight)
-    console.log("pg height:" + pg.height)
-
-
 
   };
 
@@ -40,7 +34,7 @@ export default function NoiseLanding(p, props) {
 
     // applyNoiseFilter(pg)
 
-    // grain(pg)
+    //grain(pg)
 
     p.image(pg, 0, 0)
 
@@ -106,7 +100,6 @@ export default function NoiseLanding(p, props) {
           // let a = pg.pixels[loc + 3];
 
           // pg.fill(r,g,b,a / i)
-
         }
       }
 
@@ -116,7 +109,7 @@ export default function NoiseLanding(p, props) {
     // Resize the canvas when the
     // browser's size changes.
     p.windowResized = () => {
-      resizeCanvas(p.windowWidth, p.windowHeight);
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
     }
 };
 
