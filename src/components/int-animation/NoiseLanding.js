@@ -8,6 +8,14 @@ export default function NoiseLanding(p, props) {
     // draw all objects relative to center of the screen
     pg.translate(p.windowWidth/2,p.windowHeight/2);
 
+    console.log("window width:" + p.windowWidth)
+    console.log("pg width:" + pg.width)
+
+    console.log("window height:" + p.windowHeight)
+    console.log("pg height:" + pg.height)
+
+
+
   };
 
   p.draw = () => {
