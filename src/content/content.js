@@ -129,7 +129,8 @@ const content = {
 
   // ---- Landing ---- //
   landing: {
-    name: "Mina Fletcher",
+    firstName: "Mina",
+    lastName: "Fletcher",
     subtitle: "Designer. Developer. Creator",
     body: "As a front-end developer based in New York, I aspire to create interactive visual experiences and to further explore the world of creative coding. I’m currently looking for freelance or full-time roles in software engineering, animation, and computer graphics.",
     button: "VIEW WORK",

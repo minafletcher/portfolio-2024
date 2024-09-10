@@ -4,6 +4,9 @@ import Experience from "../../Experience";
 import { useElementOnScreen } from "../helpers/useElementOnScreen";
 import scrollViewHelper from "../helpers/scrollToView";
 import { useEffect } from "react";
+import NoiseLanding from "../int-animation/NoiseLanding";
+import { ReactP5Wrapper } from "react-p5-wrapper";
+import useWindowSize from "../helpers/useWindowSize";
 
 export default function Landing({ sectionKey, setDot }) {
   // checks throughout run when landing is visible
@@ -17,6 +20,8 @@ export default function Landing({ sectionKey, setDot }) {
     isVisible ? setDot(sectionKey) : null;
   }, [containerRef, isVisible]);
 
+  const dimensions = useWindowSize();
+
   return (
     <div
       ref={containerRef}
@@ -24,9 +29,19 @@ export default function Landing({ sectionKey, setDot }) {
       className="LANDING-ANCHOR"
     >
       <div className="CONT-CANVAS snap-scroll h-screen min-h-[600px] grid grid-cols-[1fr] items-center top-0 section-margin-offset">
-        <div className="LANDING-CONTAINER max-w-fit section-vert row-start-1 col-start-1 z-10 section-px-sm">
+      <div className="CUSTOM-P5-WRAPPER relative flex justify-center items-center z-0 w-full h-full bg-white">
+            <ReactP5Wrapper
+              sketch={NoiseLanding}
+              width={dimensions.width}
+              height={dimensions.height}
+            ></ReactP5Wrapper>
+          </div>
+        <div className="LANDING-CONTAINER absolute max-w-fit section-vert row-start-1 col-start-1 z-10 section-px-sm">
           <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
-            {content.landing.name}
+            {content.landing.firstName}
+          </h1>
+          <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
+            {content.landing.lastName}
           </h1>
           <h2 className="LANDING-SUBTITLE max-w-fit text-black laptop:heading2 tablet:tablet-heading2 mobile:heading3">
             {content.landing.subtitle}
@@ -48,6 +63,7 @@ export default function Landing({ sectionKey, setDot }) {
         >
           <Experience />
         </Canvas> */}
+        
       </div>
     </div>
   );
