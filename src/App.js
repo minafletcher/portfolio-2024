@@ -8,8 +8,9 @@ import SketchbookPage from "./components/Sketchbook/SketchbookPage";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
-  const [activeDot, setActiveDot] = useState();
-  const [dotsLight, setDotsLight] = useState();
+  // set initial dot to section key 1 (landing)
+  const [activeDot, setActiveDot] = useState(1);
+  const [dotsLight, setDotsLight] = useState(false);
   const [navLight, setNavLight] = useState(false);
 
   const navToggle = (light) => {

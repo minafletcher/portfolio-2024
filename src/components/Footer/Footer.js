@@ -16,7 +16,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.9,
   });
 
   useEffect(() => {

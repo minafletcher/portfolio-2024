@@ -382,7 +382,7 @@ const content = {
 
   skills: {
     header: "Skills & Interests",
-    body: "Click on the different interest tags and see which of my skills correspond with each!",
+    body: "Hover over the different interest tags and see which of my skills correspond with each!",
     tags: [
       {
         key: 1,

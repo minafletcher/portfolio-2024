@@ -131,7 +131,8 @@
     }
 
     .snap-scroll {
-        @apply h-fit laptop:min-h-screen laptop:snap-start
+        @apply h-fit laptop:min-h-screen
+        /* @apply h-fit laptop:min-h-screen laptop:snap-start */
     }
 
     .section-vert {
@@ -225,7 +226,7 @@ body,
     overflow-x: hidden;
     background-color: #FFFDF6;
     overflow-y: auto;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     scroll-behavior: smooth;
 }
 

@@ -19,7 +19,7 @@ export default function Dot({ dotKey, dotId, setDot, activeDot, dotsLight }) {
   };
 
   function dotScroll() {
-    setDot(dotKey);
+    // intersection observer with scroll into view will set the active dot for us
     scrollViewHelper(dotId);
   }
 

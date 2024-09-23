@@ -10,7 +10,6 @@ import classNames from "classnames";
 export default function Sketchbook({
   sectionKey,
   navToggle,
-  setNavLight,
   setDot,
   dotsMode,
 }) {
