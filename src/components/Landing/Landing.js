@@ -40,9 +40,9 @@ export default function Landing({ sectionKey, setDot }) {
           <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
             {content.landing.firstName}
           </h1>
-          <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
+          {/* <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
             {content.landing.lastName}
-          </h1>
+          </h1> */}
           <h2 className="LANDING-SUBTITLE max-w-fit text-black laptop:heading2 tablet:tablet-heading2 mobile:heading3">
             {content.landing.subtitle}
           </h2>

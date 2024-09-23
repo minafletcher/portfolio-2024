@@ -1,5 +1,5 @@
 // ---- Page Image Imports ---- //
-import DotGrid from "./img/svgs/dot-grid-cmyk-3.svg";
+import DotGrid from "./img/svgs/dot-grid-vf-1.svg";
 
 // ---- About Me Image Import ---- //
 import HeadshotGif from "./img/mina-headshot-24.gif";
@@ -129,7 +129,7 @@ const content = {
 
   // ---- Landing ---- //
   landing: {
-    firstName: "Mina",
+    firstName: "Mina Fletcher",
     lastName: "Fletcher",
     subtitle: "Designer. Developer. Creator",
     body: "As a front-end developer based in New York, I aspire to create interactive visual experiences and to further explore the world of creative coding. I’m currently looking for freelance or full-time roles in software engineering, animation, and computer graphics.",

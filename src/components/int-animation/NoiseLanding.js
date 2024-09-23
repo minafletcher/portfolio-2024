@@ -41,42 +41,57 @@ export default function NoiseLanding(p, props) {
     p.background('#FFFDF6');
     p.blendMode(p.MULTIPLY)
 
-    // pg.noStroke()
 
-    // pg.fill('red');
-    // drawBlob(250,-200,12,0.002, 300, 1, 0.02);
-    // pg.fill('blue');
-    // drawBlob(500,0,14,0.002, 300, -1, 0.05);
-    // pg.fill('yellow');
-    // drawBlob(700,200,14,0.002, 150, 1, 0.01);
+    // blobG1.noStroke()
+    // blobG1.fill(255,196,43)
+    // let xPos1 = 250
+    // let yPos1 = - p.windowHeight / 4
+    // let size1 = p.windowWidth / 9
 
-    // drawSquare(250,-150, 15, 15, 10, 10)
+    // // mobile dimensions
+    // if (p.windowWidth < 768) {
+    //   xPos1 = - p.windowWidth / 3
+    //   yPos1 = -250
+    //   size1 = p.windowWidth / 6
+    // }
+    // drawBlob(blobG1, xPos1,yPos1,12,0.002, size1, 1, 0.01);
 
-    // let gradient = p.drawingContext.createLinearGradient(20,20, p.width-20,p.height-20)
+    // let size2 = p.windowWidth / 6.25
+    // let xPos2 = 425
+    // let yPos2 = -200
+    // let vertices2 = 7
+    // let speed2 = 0.001
+    // blobG4.noStroke()
+    // blobG4.fill(255,0,0,255)
+    // drawBlob(blobG4, xPos2,yPos2,vertices2,speed2, size2, 1, 0.09);
 
-    // gradient.addColorStop(0, 'White');
-    // gradient.addColorStop(1, 'Black');
+    // let size3 = p.constrain(p.windowWidth / 6, 0, 1500)
+    
+    // let xPos3 = 0
+    // let yPos3 = 0
 
-    // p.drawingContext.fillStyle = gradient
+    // if (p.windowWidth < 800) {
+    //   xPos3 = p.windowWidth / 3
+    //   yPos3 = -p.windowWidth / 10
+    // }
+    // else {
+    //   xPos3 = 500
+    // }
+    
+    // let vertices3 = 7
+    // let speed3 = 0.001
+    // blobG2.noStroke()
+    // blobG2.fill(30,72,255);
+    // if (p.windowWidth > 768){
+    // drawBlob(blobG2, xPos3,yPos3,vertices3,speed3, size3, -1, 0.09);
+    // }
 
-    blobG1.noStroke()
-    blobG1.fill('yellow')
-    let xPos1 = 250
-    let yPos1 = -200
-    let size1 = 175
-    drawBlob(blobG1, xPos1,yPos1,12,0.002, size1, 1, 0.03);
-
-    blobG4.noStroke()
-    blobG4.fill('red')
-    drawBlob(blobG4, 450,-75,14,0.002, 275, -1, 0.05);
-
-    blobG2.noStroke()
-    blobG2.fill('blue');
-    drawBlob(blobG2, 500,0,14,0.002, 275, -1, 0.05);
-
-    blobG3.noStroke()
-    blobG3.fill('yellow');
-    drawBlob(blobG3, 700,200,14,0.002, 125, 1, 0.01)
+    // let size4 = p.windowWidth / 10
+    // blobG3.noStroke()
+    // blobG3.fill(255,196,43);
+    // if (p.windowWidth > 768){
+    //   drawBlob(blobG3, 700,200,14,0.002, size4, 1, 0.015)
+    // }
 
     pixelate(blobG2, 10, 10)
 
