@@ -69,7 +69,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
 
             <div className="flex flex-row justify-between text-white body-responsive ">
               <div>{content.footer.designedBy}</div>
-              <div>{content.footer.v1}</div>
+              {/* <div>{content.footer.v1}</div> */}
             </div>
           </div>
         </div>
