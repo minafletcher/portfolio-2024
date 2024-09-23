@@ -29,14 +29,14 @@ export default function Landing({ sectionKey, setDot }) {
       className="LANDING-ANCHOR"
     >
       <div className="CONT-CANVAS h-screen min-h-[600px] grid grid-cols-[1fr] items-center top-0 section-margin-offset">
-      {/* <div className="CUSTOM-P5-WRAPPER relative flex justify-center items-center z-0 w-full h-full bg-white">
+      <div className="CUSTOM-P5-WRAPPER p5-wrapper">
             <ReactP5Wrapper
               sketch={NoiseLanding}
               width={dimensions.width}
               height={dimensions.height}
             ></ReactP5Wrapper>
-          </div> */}
-        <div className="LANDING-CONTAINER absolute max-w-fit section-vert z-10 section-px-sm">
+          </div>
+        <div className="LANDING-CONTAINER background-section justify-center">
           <h1 className="LANDING-TITLE max-w-fit text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase mobile:pr-24 tablet:pr-0">
             {content.landing.firstName}
           </h1>
