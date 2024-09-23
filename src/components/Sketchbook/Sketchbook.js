@@ -40,7 +40,7 @@ export default function Sketchbook({
         className="SKETCHBOOK-ANCHOR relative"
       >
         <div className="SKETCHBOOK-MARGIN relative snap-scroll background-margin-offset section-margin-offset overflow-hidden mobile:h-[90vh] tablet:h-screen min-h-[600px]">
-        <div className="CUSTOM-P5-WRAPPER p5-wrapper">
+        <div className="CUSTOM-P5-WRAPPER p5-wrapper bg-black">
             <ReactP5Wrapper
               sketch={NoiseSketch}
               width={dimensions.width}

@@ -36,7 +36,7 @@ export default function Landing({ sectionKey, setDot }) {
               height={dimensions.height}
             ></ReactP5Wrapper>
           </div>
-        <div className="LANDING-CONTAINER background-section bg-white justify-center items-center">
+        <div className="LANDING-CONTAINER background-section justify-center items-center">
           <h1 className="LANDING-TITLE max-w-fit text-center text-black laptop:heading1 tablet:tablet-heading1 mobile:mobile-heading1 uppercase tablet:pr-0">
             {content.landing.firstName}
           </h1>

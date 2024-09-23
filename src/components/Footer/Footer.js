@@ -31,7 +31,7 @@ export default function Footer({ sectionKey, navToggle, setDot, dotsMode }) {
   return (
     <div ref={containerRef} id="contact" className="CONTACT-ANCHOR">
       <div className="FOOTER-MARGIN relative snap-scroll background-margin-offset">
-        <div className="CUSTOM-P5-WRAPPER p5-wrapper">
+        <div className="CUSTOM-P5-WRAPPER p5-wrapper bg-black">
           <ReactP5Wrapper
             sketch={NoiseSketch}
             width={dimensions.width}
