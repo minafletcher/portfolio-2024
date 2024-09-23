@@ -46,7 +46,7 @@ export default function Landing({ sectionKey, setDot }) {
           <h2 className="LANDING-SUBTITLE max-w-fit text-black laptop:heading2 tablet:tablet-heading2 mobile:heading3">
             {content.landing.subtitle}
           </h2>
-          <p className="LANDING-BODY text-black body-responsive max-w-2xl mt-4">
+          <p className="LANDING-BODY text-black body-responsive max-w-2xl mt-4 text-center">
             {content.landing.body}
           </p>
           <button
