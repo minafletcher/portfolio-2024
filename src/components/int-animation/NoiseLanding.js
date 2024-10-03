@@ -215,7 +215,7 @@ export default function NoiseLanding(p) {
 
   function setVars() {
     // media queries
-    if (windowWidth < 768) {
+    if (windowWidth < 1024) {
       // left red blob
       sizeLR = windowWidth / 5;
       yPosLR = windowHeight * 0.6;
