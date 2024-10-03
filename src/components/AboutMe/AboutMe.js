@@ -28,9 +28,9 @@ export default function AboutMe({ sectionKey, setDot }) {
       <div className="ABOUT-ME-CONTAINER snap-scroll section-hor mobile:gap-8 laptop:gap-12 justify-center items-center section-px-lg">
         <div className="BACKGROUND-DOTS absolute z-0 flex w-full">
           <img
-            className="mobile:w-40 tablet:w-80 mobile:-mt-[500px] laptop:-mt-64"
-            src={content.page.dotUrl}
-            alt={content.page.dotAlt}
+            className="mobile:w-48 tablet:w-80 mobile:-mt-[500px] laptop:-mt-64 desktopMax:ml-[10%]"
+            src={content.page.dotUrl1}
+            alt={content.page.dotAlt1}
           ></img>
         </div>
 

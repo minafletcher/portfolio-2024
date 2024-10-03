@@ -72,8 +72,8 @@ export default function Experience({ sectionKey, setDot }) {
         <div className="BACKGROUND-DOTS absolute z-0 flex w-full items-end justify-center">
           <img
             className="mobile:w-60 tablet:w-80 mobile:ml-60 tablet:ml-72 mobile:-mb-[425px] laptop:-mb-[475px]"
-            src={content.page.dotUrl}
-            alt={content.page.dotAlt}
+            src={content.page.dotUrl2}
+            alt={content.page.dotAlt2}
           ></img>
         </div>
       </div>

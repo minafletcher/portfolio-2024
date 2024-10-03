@@ -1,5 +1,6 @@
 // ---- Page Image Imports ---- //
-import DotGrid from "./img/svgs/dot-grid-vf-1.svg";
+import DotCircle1 from "./img/svgs/dot-circle-1.svg";
+import DotCircle2 from "./img/svgs/dot-circle-2.svg";
 
 // ---- About Me Image Import ---- //
 import HeadshotGif from "./img/mina-headshot-24.gif";
@@ -68,8 +69,10 @@ const tags = {
 
 const content = {
   page: {
-    dotUrl: DotGrid,
-    dotAlt: "Dot Grid Image",
+    dotUrl1: DotCircle1,
+    dot1Alt: "Image of two overlayed red and blue circles with a grid of cyan dots on top",
+    dotUrl2: DotCircle2,
+    dot2Alt: "Image of two overlayed cyan and magenta circles with a grid of yellow dots on top",
   },
   
   // ---- NavBar ---- //
