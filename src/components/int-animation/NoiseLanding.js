@@ -79,11 +79,7 @@ export default function NoiseLanding(p) {
   let stretchRG;
 
   p.setup = () => {
-    if (p.windowHeight > 768) {
-      windowHeight = p.windowHeight + 200;
-    } else {
-      windowHeight = p.windowHeight;
-    }
+    windowHeight = p.windowHeight + 200;
     windowWidth = p.windowWidth;
 
     p.pixelDensity(1);
