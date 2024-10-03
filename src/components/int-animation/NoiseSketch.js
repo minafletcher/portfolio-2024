@@ -38,5 +38,12 @@ export default function NoiseSketch(p, props) {
 
     p.image(noiseImg, 0, 0, p.windowWidth, p.windowHeight);
   };
+
+  // p.windowResized = () => {
+  //   p.resizeCanvas(p.windowWidth, p.windowHeight);
+    
+  //   p.image(noiseImg, 0, 0, p.windowWidth, p.windowHeight)
+
+  // }
 };
 

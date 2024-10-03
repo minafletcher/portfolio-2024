@@ -208,7 +208,7 @@
     }
 
     .p5-wrapper {
-        @apply absolute flex justify-center items-center z-0 w-full h-full overflow-hidden;
+        @apply absolute flex z-0 w-full h-full;
     }
 
 }

@@ -22,13 +22,17 @@ export default function Landing({ sectionKey, setDot }) {
 
   const dimensions = useWindowSize();
 
+  if (dimensions.width > 768){
+    dimensions.height = dimensions.height + 200
+  }
+
   return (
     <div
       ref={containerRef}
       id="home"
       className="LANDING-ANCHOR"
     >
-      <div className="CONT-CANVAS h-screen min-h-[600px] grid grid-cols-[1fr] items-center top-0 section-margin-offset">
+      <div className="CONT-CANVAS relative mobile:min-h-[400px] tablet:min-h-[800px] h-screen grid grid-cols-[1fr] items-center top-0">
       <div className="CUSTOM-P5-WRAPPER p5-wrapper">
             <ReactP5Wrapper
               sketch={NoiseLanding}

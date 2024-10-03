@@ -27,7 +27,6 @@ const Portfolio = ({
         navLight={navLight}
       />
       <Dots setDot={setActiveDot} activeDot={activeDot} dotsLight={dotsLight} />
-      <div className="SECTION-PADDING">
       <Landing sectionKey={1} setDot={setActiveDot} />
       <Work sectionKey={2} setDot={setActiveDot} />
       <Sketchbook
@@ -40,7 +39,6 @@ const Portfolio = ({
       <AboutMe sectionKey={4} setDot={setActiveDot} />
       <Experience sectionKey={5} setDot={setActiveDot} />
       <Skills sectionKey={6} setDot={setActiveDot} />
-          </div>
     </div>
   );
 };
