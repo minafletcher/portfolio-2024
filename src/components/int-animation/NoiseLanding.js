@@ -78,6 +78,9 @@ export default function NoiseLanding(p) {
   let speedRG;
   let stretchRG;
 
+  // dots array
+  let dots;
+
   p.setup = () => {
     windowHeight = p.windowHeight + 200;
     windowWidth = p.windowWidth;
@@ -90,9 +93,15 @@ export default function NoiseLanding(p) {
 
     // set values for each blob
     setVars();
+
+    dots = []
+    
+    populateDots(dots)
   };
 
   p.draw = () => {
+
+    console.log(p.frameRate())
     clearGraphics();
 
     p.blendMode(p.BLEND);
@@ -198,18 +207,18 @@ export default function NoiseLanding(p) {
     // first layer - yellow green blurred blobs
     p.image(blobYG, 0, 0);
 
-    // second layer - red cyan blurred blobs
+    // // second layer - red cyan blurred blobs
     p.image(blobRC, 0, 0);
 
-    // blur first two layers
+    // // blur first two layers
     p.filter(p.BLUR, 10);
 
     p.image(blobStroke, 0, 0);
 
-    // pixelate blue and magenta top layer blobs
+    // // pixelate blue and magenta top layer blobs
     pixelate(blobBM, 10, 10);
 
-    // blue and magenta top layer blobs
+    // // blue and magenta top layer blobs
     p.image(blobBM, 0, 0);
   };
 
@@ -380,37 +389,31 @@ export default function NoiseLanding(p) {
 
     let offset = 4;
     let dotA = 30;
-    let fadeThreshold = (pg.width + pg.height * pg.width) * 4 * 0.35;
+    let fadeThreshold = (pg.width + pg.height * pg.width) * offset * 0.35;
+
+    // default pixelValue will set dots to transparent
+    let pixelValue = 0;
 
     for (let i = 0; i < pg.width; i += pixelWidth) {
       for (let j = 0; j < pg.height; j += pixelHeight) {
         let loc = (i + j * pg.width) * offset;
 
-        // color pixel dots white if they're inside a colored image
-        if (pg.pixels[loc + 3] != 0) {
-          pg.pixels[loc + 3] = 0;
-          pg.pixels[loc + 3 + offset] = 0;
-          pg.pixels[loc + 3 + offset * pg.width] = 0;
-          pg.pixels[loc + 3 + offset * pg.width + offset] = 0;
+        // set pixel dots to dark mode if its in a white background
+        if (pg.pixels[loc + 3] == 0) {
+          pixelValue = dotA;
         }
 
         // fade dots based on distance from threshold
         else if (loc > fadeThreshold) {
           let dy = fadeThreshold / loc;
-
-          pg.pixels[loc + 3] = dotA * dy;
-          pg.pixels[loc + 3 + offset] = dotA * dy;
-          pg.pixels[loc + 3 + offset * pg.width] = dotA * dy;
-          pg.pixels[loc + 3 + offset * pg.width + offset] = dotA * dy;
+          pixelValue = dotA * dy
         }
 
-        // set pixel dots to dark mode
-        else {
-          pg.pixels[loc + 3] = dotA;
-          pg.pixels[loc + 3 + offset] = dotA;
-          pg.pixels[loc + 3 + offset * pg.width] = dotA;
-          pg.pixels[loc + 3 + offset * pg.width + offset] = dotA;
-        }
+        // else color pixel dots white of they're inside a colored image (keep pixelValue at 0)
+        pg.pixels[loc + 3] = pixelValue;
+        pg.pixels[loc + 3 + offset] = pixelValue;
+        pg.pixels[loc + 3 + offset * pg.width] = pixelValue;
+        pg.pixels[loc + 3 + offset * pg.width + offset] = pixelValue;
       }
     }
 
@@ -451,4 +454,17 @@ export default function NoiseLanding(p) {
     blobRC = p.createGraphics(windowWidth, windowHeight);
     blobStroke = p.createGraphics(windowWidth, windowHeight);
   }
+
+  //
+  function populateDots(dots) {
+
+    for (let i = 0; i < windowWidth; i+=10){
+      for (let j = 0; j < windowHeight; j+=10){
+
+      }
+    }
+  }
 }
+
+
+// get bounding box for blobs so you only update pixels within range of the blobs
