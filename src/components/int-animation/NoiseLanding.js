@@ -101,7 +101,6 @@ export default function NoiseLanding(p) {
 
   p.draw = () => {
 
-    console.log(p.frameRate())
     clearGraphics();
 
     p.blendMode(p.BLEND);
