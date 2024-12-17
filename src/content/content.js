@@ -271,6 +271,28 @@ const content = {
     experienceBlocks: [
       {
         key: 1,
+        jobTitle: "Technical Assistant & Camp Consultant",
+        company: "Beat The Bomb",
+        date: "Jun 2022 - Present",
+        linkText: "beatthebomb.com",
+        linkUrl: "https://beatthebomb.com/brooklyn",
+        bullets: [
+          {
+            key: 1,
+            text: "Assisting in on-site technical installation of laser mazes and game rooms, including using power tools, wiring and configuring computers.",
+          },
+          {
+            key: 2,
+            text: "Soldering and building custom parts for all locations of Beat The Bomb game spaces, including RFID scanners, lasers and laser rails.",
+          },
+          {
+            key: 3,
+            text: "Developing a week-long STEAM summer camp program, designing all programming and logistical planning for camp operations.",
+          },
+        ],
+      },
+      {
+        key: 2,
         jobTitle: "Code Coordinator",
         company: "The Coder School",
         date: "Feb 2023 - Present",
@@ -288,28 +310,6 @@ const content = {
           {
             key: 3,
             text: "Researching and implementing initiatives to improve and expand the school’s academic programs and outreach.",
-          },
-        ],
-      },
-      {
-        key: 2,
-        jobTitle: "Technical Assembly",
-        company: "Beat The Bomb",
-        date: "Jun 2022 - Present",
-        linkText: "beatthebomb.com",
-        linkUrl: "https://beatthebomb.com/brooklyn",
-        bullets: [
-          {
-            key: 1,
-            text: "Soldering and building custom parts for all locations of Beat The Bomb game spaces, including RFID scanners, lasers and laser rails.",
-          },
-          {
-            key: 2,
-            text: "Assisting in on-site installation and design of installation procedure to optimize energy usage and error prevention.",
-          },
-          {
-            key: 3,
-            text: "Researching modern gaming experiences for kids and curating STEM-based educational workshops at Beat The Bomb.",
           },
         ],
       },
