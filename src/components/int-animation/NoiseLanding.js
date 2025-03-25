@@ -388,7 +388,8 @@ export default function NoiseLanding(p) {
 
     let offset = 4;
     let dotA = 30;
-    let fadeThreshold = (pg.width + pg.height * pg.width) * offset * 0.35;
+    // length down the screen of how far the pixels should go
+    let fadeThreshold = (pg.width + pg.height * pg.width) * offset * 0.175;
 
     // default pixelValue will set dots to transparent
     let pixelValue = 0;
@@ -403,8 +404,8 @@ export default function NoiseLanding(p) {
         }
 
         // fade dots based on distance from threshold
-        else if (loc > fadeThreshold) {
-          let dy = fadeThreshold / loc;
+        if (loc > fadeThreshold) {
+          let dy = fadeThreshold / loc
           pixelValue = dotA * dy
         }
 
