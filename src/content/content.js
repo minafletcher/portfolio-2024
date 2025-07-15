@@ -57,6 +57,7 @@ import DiscoImg from "./img/sketchbook-images/disco-scene.png";
 import KandinskyImg from "./img/sketchbook-images/kandinsky-painter.png";
 import NoisyImg from "./img/sketchbook-images/noisy-image.png";
 import PatternImg from "./img/sketchbook-images/iterative-pattern.png";
+import PosterImg from "./img/sketchbook-images/CCNYC_Poster.png"
 
 
 
@@ -770,7 +771,26 @@ const content = {
     closeSvg: CloseArrow,
     projects: [
       {
+      key: 1,
+      title: "CCNYC Poster",
+      desc: "This coded poster advertises a weekly meetup for Creative Coding NYC. The character can walk around the scene with keyboard input, and when the character collides with a blob, it says 'Yay!'",
+      type: "code",
+      imgUrl: PosterImg,
+      imgAlt: "CCNYC Poster Project Snapshot",
+      buttonTxt: "View Project",
+      url: "https://editor.p5js.org/minafletcher/sketches/nufg7I2Qq",
+      tagNum: 1,
+      tags: [{
         key: 1,
+        tag: "Creative Coding"
+      },
+      {
+        key: 2,
+        tag: "p5.js"
+      }]
+    },
+      {
+        key: 2,
         title: "Disco Scene",
         desc: "This Three.js scene experiments with lights to mimic refractions from a spinning disco ball. I used multiple rotating light sources to map image projections onto the surrounding walls, creating the ball’s reflective effects.",
         type: "code",
@@ -795,7 +815,7 @@ const content = {
         ],
       },
       {
-        key: 2,
+        key: 3,
         title: "Noisy Image Manipulation",
         desc: "This project uses Perlin Noise to manipulate an image over time. Noise leaders are randomly placed within the image’s pixel grid, shifting their surrounding pixels and developing an organic, warped effect. The display compares the effects of the program on both color grids and images from everyday life.",
         type: "code",
@@ -816,7 +836,7 @@ const content = {
         ],
       },
       {
-        key: 3,
+        key: 4,
         title: "Coded Patterns",
         desc: "This project practices iteratively drawing patterns to a grid. Each square is drawn respectively based on specified grid size and repeat values, and explores the effects of overlaying simple patterns and shapes to develop a more complicated and compelling result.",
         type: "code",
@@ -837,7 +857,7 @@ const content = {
         ],
       },
       {
-        key: 4,
+        key: 5,
         title: "Kandinsky Painter",
         desc: "This interactive canvas allows the user to generate their own drawing inspired by Wassily Kandinsky’s abstract works. With mouse and key events the user can place shapes, change the color palette, and even save their painting as an exported image.",
         type: "code",
@@ -858,7 +878,7 @@ const content = {
         ],
       },
       {
-        key: 5,
+        key: 6,
         title: "Slanted",
         desc: "This short film tells the story about a curious boy that gets into more trouble than he expects in a modern art gallery. Modeled, textured and animated in Maya, this project significantly developed my skills in story, character, and set design through the animation pipeline.",
         type: "video",
@@ -880,7 +900,7 @@ const content = {
         ],
       },
       {
-        key: 6,
+        key: 7,
         title: "Ghost Talent Show",
         desc: "This short includes a cute, ghost character who showcases his flying skills at a talent show. Modeled and animated in Maya, this project practiced my motion animation skills to create a smooth, ghost-like flying effect.",
         type: "video",
@@ -902,7 +922,7 @@ const content = {
         ],
       },
       {
-        key: 7,
+        key: 8,
         title: "Space Junk",
         desc: "This educational entertainment video animates visuals to Natalie Panek's Ted Talk 'Let's Clean Up the Space Junk Orbiting Earth'. Developed as a group project, I contributed equal work to the film’s asset design, storyboarding, layer animation and sound effects.",
         type: "video",
@@ -924,7 +944,7 @@ const content = {
         ],
       },
       {
-        key: 8,
+        key: 9,
         title: "Personal Logo Animation",
         desc: "This short animation plays on the energy and character of a personal logo design. Giving personality to foundational shapes and colors, this animation highlights the creativity and desire for exploration within my personal brand.",
         type: "video",
@@ -946,7 +966,7 @@ const content = {
         ],
       },
       {
-        key: 9,
+        key: 10,
         title: "Claymation Music Video",
         desc: "This stop-motion animation visually explores the relationship between sound and video. Using both natural and man-made materials, textures and image filters, I aim to visually depict the balance of the song’s organic and digital nature in a state of controlled chaos.",
         type: "video",

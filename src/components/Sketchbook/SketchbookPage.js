@@ -66,7 +66,7 @@ export default function SketchbookPage({ navLight, setNavLight }) {
                     <Link to={project.url} target="_blank">
                       <img
                         src={project.imgUrl}
-                        className="w-full h-full object-cover hover:scale-105 transition duration-200 ease-in-out"
+                        className="w-full h-[300px] object-cover hover:scale-105 transition duration-200 ease-in-out"
                       ></img>
                     </Link>
                   </div>
