@@ -46,6 +46,7 @@ import ResumeLogo from "./img/svgs/resume-icon.svg";
 
 // Project Page Images
 import Enerco from "./img/project-images/enerco-project-2.png";
+import Kaboom from "./img/project-images/campkaboom-min.png";
 import youbet from "./img/project-images/youbet-project-min.png";
 import GGarden from "./img/project-images/gogarden-project.png";
 import Interventions from "./img/project-images/interventions-project.png";
@@ -75,7 +76,7 @@ const content = {
     dotUrl2: DotCircle2,
     dot2Alt: "Image of two overlayed cyan and magenta circles with a grid of yellow dots on top",
   },
-  
+
   // ---- NavBar ---- //
   navbar: {
     homeText: "Home",
@@ -151,6 +152,26 @@ const content = {
     projects: [
       {
         key: 1,
+        title: "Camp Ka-Boom",
+        description:
+          "I developed and lead a STEAM youth summer camp program at Beat The Bomb. I created the camp website in Webflow, and designed programming exploring the intersections between art and technology.",
+        projImg: Kaboom,
+        projImgAlt: "Camp Ka-Boom logo on a colorful paint background",
+        buttonTxt: "View Site",
+        buttonUrl: "https://www.beatthebomb.com/camp-ka-boom",
+        tags: [
+          {
+            key: 1,
+            tag: tags.tagUX,
+          },
+          {
+            key: 3,
+            tag: tags.tagWebDev,
+          },
+        ],
+      },
+      {
+        key: 2,
         title: "Ener.co",
         description:
           "As a freelance developer, I designed and developed Ener.co’s marketing website. The site showcases their mission to improve AC efficiency through cooling coil technology, and utilizes real-time data to highlight product impact.",
@@ -771,24 +792,24 @@ const content = {
     closeSvg: CloseArrow,
     projects: [
       {
-      key: 1,
-      title: "CCNYC Poster",
-      desc: "This coded poster advertises a weekly meetup for Creative Coding NYC. The character can walk around the scene with keyboard input, and when the character collides with a blob, it says 'Yay!'",
-      type: "code",
-      imgUrl: PosterImg,
-      imgAlt: "CCNYC Poster Project Snapshot",
-      buttonTxt: "View Project",
-      url: "https://editor.p5js.org/minafletcher/sketches/nufg7I2Qq",
-      tagNum: 1,
-      tags: [{
         key: 1,
-        tag: "Creative Coding"
+        title: "CCNYC Poster",
+        desc: "This coded poster advertises a weekly meetup for Creative Coding NYC. The character can walk around the scene with keyboard input, and when the character collides with a blob, it says 'Yay!'",
+        type: "code",
+        imgUrl: PosterImg,
+        imgAlt: "CCNYC Poster Project Snapshot",
+        buttonTxt: "View Project",
+        url: "https://editor.p5js.org/minafletcher/sketches/nufg7I2Qq",
+        tagNum: 1,
+        tags: [{
+          key: 1,
+          tag: "Creative Coding"
+        },
+        {
+          key: 2,
+          tag: "p5.js"
+        }]
       },
-      {
-        key: 2,
-        tag: "p5.js"
-      }]
-    },
       {
         key: 2,
         title: "Disco Scene",

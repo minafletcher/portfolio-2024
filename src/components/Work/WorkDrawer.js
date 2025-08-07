@@ -19,7 +19,7 @@ export default function WorkDrawer({ project, toggle, open }) {
   );
 
   const mobileImg = classNames(
-    "MOBILE-IMG tablet:basis-3/5 laptop:hidden transition-all duration-400 ease-in-out",
+    "MOBILE-IMG basis-1/2 tablet:basis-1/3 laptop:hidden transition-all duration-400 ease-in-out",
     {
       "opacity-100": open,
       "opacity-0": !open,
@@ -47,7 +47,7 @@ export default function WorkDrawer({ project, toggle, open }) {
 
       <div className={dropdown}>
         <div className="overflow-hidden flex flex-row laptop:flex-col gap-4">
-          <div className="DESC-BTN-WRAPPER flex flex-col body-responsive gap-4">
+          <div className="DESC-BTN-WRAPPER flex flex-col basis-1/2 tablet:basis-2/3 body-responsive gap-4">
             {project.description}
             <Link className="max-w-fit" to={project.buttonUrl} target="_blank">
               <button className="small-button max-w-fit capitalize">
