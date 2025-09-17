@@ -26,9 +26,11 @@ export default function Dropdown({ block, toggle, open }) {
           <div className="text-black laptop:heading3 tablet:mobile-heading3 mobile:mobile-heading4">
             {block.jobTitle}
           </div>
-          <div className="text-black font-rubik font-regular laptop:heading3 tablet:mobile-heading3 mobile:mobile-heading4">
-            {"@ " + block.company}{" "}
-          </div>
+          { block.company &&
+
+            <div className="text-black font-rubik font-regular laptop:heading3 tablet:mobile-heading3 mobile:mobile-heading4">
+              {"@ " + block.company}{" "}
+            </div> }
         </div>
 
         <div className="DROPDOWN-TOP-RIGHT flex flex-row gap-4">
@@ -54,11 +56,13 @@ export default function Dropdown({ block, toggle, open }) {
             })}
           </ul>
 
-          <Link to={block.linkUrl} target="_blank">
-            <div className="BLOCK-LINK max-w-fit small-button mt-4 lowercase">
-              {block.linkText}
-            </div>
-          </Link>
+          {block.linkUrl &&
+            <Link to={block.linkUrl} target="_blank">
+              <div className="BLOCK-LINK max-w-fit small-button mt-4 lowercase">
+                {block.linkText}
+              </div>
+            </Link>}
+
         </div>
       </div>
     </div>

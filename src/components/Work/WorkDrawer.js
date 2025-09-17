@@ -12,7 +12,7 @@ export default function WorkDrawer({ project, toggle, open }) {
   );
 
   const titleTags = classNames(
-    "TITLE-TAGS flex flex-row mobile:flex-wrap laptop:flex-nowrap justify-between mobile:gap-2 laptop:gap-0 transition-all duration-300 ease-in-out",
+    "TITLE-TAGS flex flex-row flex-wrap justify-between gap-2 transition-all duration-300 ease-in-out",
     {
       "px-0 laptop:hover:px-2 cursor-pointer": !open,
     }

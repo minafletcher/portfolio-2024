@@ -34,7 +34,7 @@ export default function Work({ sectionKey, setDot }) {
       <div className="WORK-CONTAINER section-vert snap-scroll justify-center section-px-lg">
         <div className="WORK-HEADER section-header">{content.work.header}</div>
         <div className="TABS-IMG flex flex-row justify-between laptop:gap-8">
-          <div className="PROJECT-TABS flex flex-col mt-6 border-t border-black laptop:basis-1/2 desktop:basis-3/5">
+          <div className="PROJECT-TABS flex flex-col mt-6 border-t border-black laptop:max-h-[425px] overflow-scroll laptop:basis-1/2 desktop:basis-3/5">
             {content.work.projects.map((project) => {
               return (
                 <WorkDrawer

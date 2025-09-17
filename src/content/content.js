@@ -45,6 +45,7 @@ import MailLogo from "./img/svgs/mail-icon.svg";
 import ResumeLogo from "./img/svgs/resume-icon.svg";
 
 // Project Page Images
+import MWBA from "./img/project-images/mwba-thumbnail.png";
 import Enerco from "./img/project-images/enerco-project-2.png";
 import Kaboom from "./img/project-images/campkaboom-min.png";
 import youbet from "./img/project-images/youbet-project-min.png";
@@ -152,6 +153,30 @@ const content = {
     projects: [
       {
         key: 1,
+        title: "Mount Wilson Bicycling Association",
+        description:
+          "I redesigned and developed the non-profit MWBA's website, building them a custom blog platform in Webflow. The redesign included developing MWBA's brand colors, typography, and designing custom graphics.",
+        projImg: MWBA,
+        projImgAlt: "MWBA logo on a sunset mountain background",
+        buttonTxt: "View Site",
+        buttonUrl: "https://www.mwba.org/",
+        tags: [
+          {
+            key: 1,
+            tag: tags.tagUX,
+          },
+          {
+            key: 2,
+            tag: tags.tagBr,
+          },
+          {
+            key: 3,
+            tag: tags.tagWebDev,
+          },
+        ],
+      },
+      {
+        key: 2,
         title: "Camp Ka-Boom",
         description:
           "I developed and lead a STEAM youth summer camp program at Beat The Bomb. I created the camp website in Webflow, and designed programming exploring the intersections between art and technology.",
@@ -171,7 +196,7 @@ const content = {
         ],
       },
       {
-        key: 2,
+        key: 3,
         title: "Ener.co",
         description:
           "As a freelance developer, I designed and developed Ener.co’s marketing website. The site showcases their mission to improve AC efficiency through cooling coil technology, and utilizes real-time data to highlight product impact.",
@@ -183,6 +208,10 @@ const content = {
           {
             key: 1,
             tag: tags.tagUX,
+          },
+          {
+            key: 2,
+            tag: tags.tagBr,
           },
           {
             key: 3,
@@ -208,7 +237,7 @@ const content = {
       //   ]
       // },
       {
-        key: 3,
+        key: 4,
         title: "GoGarden",
         description:
           "I designed a mobile application for community garden members and visitors to learn about and track plant care. The prototype showcases three user workflows and use of the PlantExpert AR feature.",
@@ -229,7 +258,7 @@ const content = {
         ],
       },
       {
-        key: 4,
+        key: 5,
         title: "Interventions: Amplify",
         description:
           "As a developer at Scout, Northeastern's design studio, I helped design and develop the marketing website for Interventions: Amplify 2022, Scout’s annual design conference.",
@@ -246,7 +275,7 @@ const content = {
         ],
       },
       {
-        key: 5,
+        key: 6,
         title: "CoolGreenPower",
         description:
           "As a software engineer at CoolGreenPower, I developed their marketing website and a built-in Income Estimator tool for HVAC contractors to estimate their projected savings with COOLNOMIX.",
@@ -293,7 +322,26 @@ const content = {
     experienceBlocks: [
       {
         key: 1,
-        jobTitle: "Technical Assistant & Camp Consultant",
+        jobTitle: "Freelance Web Developer",
+        date: "Feb 2024 - Present",
+        bullets: [
+          {
+            key: 1,
+            text: "Designing and developing websites for non-profit organizations with ADA compliance, custom UI elements and blog functionality.",
+          },
+          {
+            key: 2,
+            text: "Designing and developing portfolio websites in React with interactive Three.js elements, performance optimization and responsiveness.",
+          },
+          {
+            key: 3,
+            text: "Leading brainstorming sessions and project execution while meeting client expectations for communication and deadlines.",
+          },
+        ],
+      },
+      {
+        key: 2,
+        jobTitle: "Technical & STEAM Consultant",
         company: "Beat The Bomb",
         date: "Jun 2022 - Present",
         linkText: "beatthebomb.com",
@@ -301,20 +349,20 @@ const content = {
         bullets: [
           {
             key: 1,
-            text: "Assisting in on-site technical installation of laser mazes and game rooms, including using power tools, wiring and configuring computers.",
+            text: "Developing and leading year-round STEAM programming, designing activities and managing logistic operations of camp programs.",
           },
           {
             key: 2,
-            text: "Soldering and building custom parts for all locations of Beat The Bomb game spaces, including RFID scanners, lasers and laser rails.",
+            text: "Assisting in on-site technical installation of laser mazes and game rooms, including wiring and configuring computers.",
           },
           {
             key: 3,
-            text: "Developing a week-long STEAM summer camp program, designing all programming and logistical planning for camp operations.",
+            text: "Soldering and building custom parts for all locations of Beat The Bomb game spaces, including Arduino development, for RFID scanners, lasers and laser rails.",
           },
         ],
       },
       {
-        key: 2,
+        key: 3,
         jobTitle: "Code Coordinator",
         company: "The Coder School",
         date: "Feb 2023 - Present",
@@ -336,7 +384,7 @@ const content = {
         ],
       },
       {
-        key: 3,
+        key: 4,
         jobTitle: "Program Assistant",
         company: "Textiles & Coding",
         date: "July - Aug 2023",
@@ -359,7 +407,7 @@ const content = {
         ],
       },
       {
-        key: 4,
+        key: 5,
         jobTitle: "Tech Director",
         company: "Scout Studio",
         date: "July - Dec 2022",
@@ -381,7 +429,7 @@ const content = {
         ],
       },
       {
-        key: 5,
+        key: 6,
         jobTitle: "Frontend Developer",
         company: "Blueport Commerce",
         date: "Jan - June 2022",
