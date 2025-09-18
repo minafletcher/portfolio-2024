@@ -67,7 +67,7 @@ const tags = {
   // ---- Project Tags ---- //
   tagUX: "UI/UX",
   tagBr: "Branding",
-  tagWebDev: "Development",
+  tagWebDev: "Web Dev",
 };
 
 const content = {
