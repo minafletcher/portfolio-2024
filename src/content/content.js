@@ -45,7 +45,7 @@ import MailLogo from "./img/svgs/mail-icon.svg";
 import ResumeLogo from "./img/svgs/resume-icon.svg";
 
 // Project Page Images
-import MWBA from "./img/project-images/mwba-thumbnail.png"; 
+import mwba from "./img/project-images/mwba-thumbnail.png"; 
 import Enerco from "./img/project-images/enerco-project-2.png";
 import Kaboom from "./img/project-images/campkaboom-min.png";
 import youbet from "./img/project-images/youbet-project-min.png";
@@ -156,7 +156,7 @@ const content = {
         title: "Mount Wilson Bicycling Association",
         description:
           "I redesigned and developed the non-profit MWBA's website, building them a custom blog platform in Webflow. The redesign included developing MWBA's brand colors, typography, and designing custom graphics.",
-        projImg: MWBA,
+        projImg: mwba,
         projImgAlt: "MWBA logo on a sunset mountain background",
         buttonTxt: "View Site",
         buttonUrl: "https://www.mwba.org/",
