@@ -45,7 +45,7 @@ import MailLogo from "./img/svgs/mail-icon.svg";
 import ResumeLogo from "./img/svgs/resume-icon.svg";
 
 // Project Page Images
-import mwba from "./img/project-images/mwba-thumbnail.png"; 
+import mwba from "./img/project-images/mwba.png"; 
 import Enerco from "./img/project-images/enerco-project-2.png";
 import Kaboom from "./img/project-images/campkaboom-min.png";
 import youbet from "./img/project-images/youbet-project-min.png";
