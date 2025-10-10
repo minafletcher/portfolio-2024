@@ -156,7 +156,7 @@ const content = {
         key: 1,
         title: "Studio Snap",
         description:
-          "I designed and developed an interactive portfolio site for the animation studio Studio Snap. I used React Three Fiber and Three.js to create a unique visual experience in a 3D physics world.",
+          "I designed and developed an interactive portfolio site for the animation studio Studio Snap. I used React Three Fiber and Three.js to create a unique visual experience in a 2D physics world.",
         projImg: snap,
         projImgAlt: "Studio Snap logo on top of numerous colorful shapes",
         buttonTxt: "View Site",
