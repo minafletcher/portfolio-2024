@@ -46,6 +46,7 @@ import ResumeLogo from "./img/svgs/resume-icon.svg";
 
 // Project Page Images
 import mwba from "./img/project-images/mwba.png"; 
+import snap from "./img/project-images/snap_thumbnail.png"; 
 import Enerco from "./img/project-images/enerco-project-2.png";
 import Kaboom from "./img/project-images/campkaboom-min.png";
 import youbet from "./img/project-images/youbet-project-min.png";
@@ -151,8 +152,28 @@ const content = {
     header: "Featured Projects",
 
     projects: [
-      {
+            {
         key: 1,
+        title: "Studio Snap",
+        description:
+          "I designed and developed an interactive portfolio site for the animation studio Studio Snap. I used React Three Fiber and Three.js to create a unique visual experience in a 3D physics world.",
+        projImg: snap,
+        projImgAlt: "Studio Snap logo on top of numerous colorful shapes",
+        buttonTxt: "View Site",
+        buttonUrl: "https://studio-snap-website.vercel.app/",
+        tags: [
+          {
+            key: 1,
+            tag: tags.tagUX,
+          },
+          {
+            key: 2,
+            tag: tags.tagWebDev,
+          },
+        ],
+      },
+      {
+        key: 2,
         title: "Mount Wilson Bicycling Association",
         description:
           "I redesigned and developed the non-profit MWBA's website, building them a custom blog platform in Webflow. The redesign included developing MWBA's brand colors, typography, and designing custom graphics.",
@@ -176,7 +197,7 @@ const content = {
         ],
       },
       {
-        key: 2,
+        key: 3,
         title: "Camp Ka-Boom",
         description:
           "I developed and lead a STEAM youth summer camp program at Beat The Bomb. I created the camp website in Webflow, and designed programming exploring the intersections between art and technology.",
@@ -196,7 +217,7 @@ const content = {
         ],
       },
       {
-        key: 3,
+        key: 4,
         title: "Ener.co",
         description:
           "As a freelance developer, I designed and developed Ener.co’s marketing website. The site showcases their mission to improve AC efficiency through cooling coil technology, and utilizes real-time data to highlight product impact.",
@@ -237,7 +258,7 @@ const content = {
       //   ]
       // },
       {
-        key: 4,
+        key: 5,
         title: "GoGarden",
         description:
           "I designed a mobile application for community garden members and visitors to learn about and track plant care. The prototype showcases three user workflows and use of the PlantExpert AR feature.",
@@ -258,7 +279,7 @@ const content = {
         ],
       },
       {
-        key: 5,
+        key: 6,
         title: "Interventions: Amplify",
         description:
           "As a developer at Scout, Northeastern's design studio, I helped design and develop the marketing website for Interventions: Amplify 2022, Scout’s annual design conference.",
@@ -275,7 +296,7 @@ const content = {
         ],
       },
       {
-        key: 6,
+        key: 7,
         title: "CoolGreenPower",
         description:
           "As a software engineer at CoolGreenPower, I developed their marketing website and a built-in Income Estimator tool for HVAC contractors to estimate their projected savings with COOLNOMIX.",
